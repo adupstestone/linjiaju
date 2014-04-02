@@ -1,0 +1,45 @@
+.pro_info .to_detail b {background: url(../../img/my/icons2.gif) no-repeat;}
+
+.seckill_div{font-family:Microsoft Yahei;}
+
+.countdown{font-family: Georgia, sans-serif;border: 1px solid #eee;padding: 9px 4px;background-color: #fff;border-color: #eee #eee #eee #eee;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+.countdown font.cn{font-family:Microsooft Yahei;}
+
+#counter{font-size:18px;width:150px;padding:0 15px;}
+.pro_img{width:350px;height:350px;overflow:hidden;}
+.pro_img img{}
+.pro_info{width:550px;padding:20px;font-family:Microsoft Yahei;line-height:35px;color:#666;font-size: 14px;}
+.pro_info .title{font-size:16px;}
+.pro_info .name{font-size: 24px;}
+.pro_info .summ{line-height: 30px;height: 60px;overflow: hidden;}
+.pro_info .to_detail{cursor:pointer;}
+.pro_info .to_detail a{color:#111;}
+.pro_info .to_detail b{margin-left:10px; font-size: 14px;display: inline-block;width: 20px;height: 16px;background-position: 0 -28px;vertical-align: middle;}
+.pro_info .to_detail b:hover{background-position: 0 0;}
+.pro_info .price .inside{font-size:30px;color:red;font-family:Georgia;margin-right:10px;}
+.pro_info .price .original{text-decoration: line-through;}
+.pro_info .countdown_div{line-height:55px;}
+.pro_info .to_begin{margin-left:20px;}
+.pro_info .to_begin img{opacity: 0.7;filter: alpha(opacity=70);}
+
+.pro_sk_sn .title{font-size:16px;}
+.pro_sk_sn .content{border:1px solid #eee;color:#999;font-family:Microsooft Yahei;padding:10px;margin:0 0 10px 0;}
+
+/*
+.pro_sk_previous .title{border-top:1px solid #eee;border-left:1px solid #eee;border-right:1px solid #eee;background-color:#eee;}
+*/
+.pro_sk_previous .title{font-size:16px;}
+.pro_sk_previous .ul_div{border:1px solid #eee;}
+.pro_sk_previous li{float: left;width:291px;padding: 10px;}
+.pro_sk_previous li.po_1,.pro_sk_previous li.po_2{margin-right:10px;margin-top:10px;}
+.pro_sk_previous li.top_r{margin-top:0;}
+.pro_sk_previous li .img{float:left;width:100px;height:100px;}
+.pro_sk_previous li .img img{width:100px;}
+.pro_sk_previous li .info{float:right;width: 170px;}
+.pro_sk_previous li .info div{white-space:nowrap;overflow:hidden;}
+.pro_sk_previous li .inside{color:red;font-family:Georgia;margin-right:10px;}
+.pro_sk_previous li .original{text-decoration: line-through;color:#999;}
+
+
+
+

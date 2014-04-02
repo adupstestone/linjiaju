@@ -1,0 +1,6 @@
+.bigItemImage{
+	position: absolute; 
+	z-index:1000;display:none;
+	border:1px solid #F0F0F0;
+	background:#eee
+}

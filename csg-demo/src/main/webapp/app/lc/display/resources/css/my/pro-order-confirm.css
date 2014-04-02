@@ -1,0 +1,83 @@
+.order_body_item_content{
+	padding:10px 10px;
+}
+.border_title_div{position: relative;}
+.border_title{position: absolute;top: -14px;left:15px;background: #fff;}
+.order_body_item_content .no_addr{
+	text-align:center;font-size:16px;font-family:"Microsoft Yahei";
+}
+.order_body_item_content .item_content1{
+	height:30px;
+	line-height:30px;
+}
+.order_body_item_content .item_content2{
+	height:100px;
+	margin:5px 0px;
+}
+
+.order_body_item_content .item_content2 textarea{
+	height:100%;
+	width:100%;
+}
+
+.phone_list_table{
+	border-collapse:collapse;
+	width:100%;
+	border:1px solid #efefef;
+	color:#999;
+}
+.phone_list_table:hover{
+	color:#666;
+}
+.phone_list_table .tr_title td{
+	text-align:center;
+}
+.phone_list_table .tr_body .td_item{
+	text-align:center;
+}
+.phone_list_table .tr_body td{
+	padding:5px 10px;
+}
+
+.phone_list_table .tr_title {
+	height:30px;
+	background:#FFEFEF;
+}
+.phone_list_table .td_item{
+	width:200px;
+}
+.phone_list_table .p-img{width:80px;height:80px;text-align:center;}
+.phone_list_table .p-name{overflow:hidden;word-break:break-all;word-wrap:break-word;margin-top:5px;margin-left:4px;}}
+
+.addr_show{margin:10px 5px;}
+.addr_table{
+	border-collapse:collapse;
+	width:100%;
+	border:1px solid #efefef;
+}
+.addr_table tr{height:30px; }
+.addr_table .table_title{width:15%;text-align:right;background:#F5F5F5;}
+.addr_detail{
+	width:400px;
+}
+.addr_receiver{
+	width:80px;
+}
+.addr_select{width:100px;}
+.addr_button{width:240px;margin:10px auto}
+.addr_button b{width: 20px;height:18px;display: inline-block;line-height: 25px;vertical-align: middle;}
+.addr_button b.add{background-position: -284px -68px;}
+.addr_button b.sub{background-position: -284px -88px;}
+.addr_button .button_gray{width:100px;height:30px; color:#F6363E;margin-right:10px;line-height:30px;}
+
+
+.updateAddr,.cancleUpdate,.addr_button b{background: url("../../img/my/20130415i.png") no-repeat;}
+.updateAddr{background-position:0 -132px;width:52px;height:27px;line-height:27px;text-align: center;color:#F7F7F7}
+.cancleUpdate{background-position:-125px -51px;width:54px;height:27px;line-height:27px;text-align: center;margin-left:10px;color:#E03235}
+
+.order_sum{font-family:"Microsoft Yahei";font-size:16px;}
+.order_desc{width:100px;}
+.order_key{color:#FF0000;}
+.order_body_item_last{height:50px;margin: 20px 0; }
+
+.validate_span{ color:red;display:none;}

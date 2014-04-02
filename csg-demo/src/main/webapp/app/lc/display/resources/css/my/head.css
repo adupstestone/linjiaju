@@ -1,0 +1,33 @@
+.content_width{width:960px;margin:0px auto;}
+/*top menu begin*/
+.toplink{width:100%;height:31px;line-height:31px;_padding-top:9px;_height:22px;_line-height:22px;}
+.toplink a{margin:0 5px}
+.toplink a:link,.toplink a:visited,.toplink span{color:#aca5a5}
+.toplink .login_name{color:red;}
+.toplink a.to_back_manage{color:#4BC0EF;text-decoration:underline;}
+.toplink .topdiv{position: relative;}
+.cart{position:relative;padding-left:22px;}
+.cart b{background-image: url("../../img/my/icons.png");background-repeat: no-repeat;}
+.cart b{position: absolute;left: 0px;top:-1px;width: 22px;height: 20px;line-height: 16px;background-position: -36px -32px;display: block;}
+.cart b:hover{background-position:-61px -32px}
+	
+#login_box{position:relative;background-color:#fff;border:1px solid #eee;right:0px;top:30px;padding:20px 20px 10px 20px;display:none;width:150px;height:105px;float: right;position: absolute;z-index:7;}
+#login_box a.close{width:8px;height:8px;display: inline-block;position:absolute;background-position:-289px -32px;right:5px;top:5px;}
+#login_box.show{display:block;}
+#login_box.hide{display:none;}
+#login_box input{background-color:#eee;border:none;height:25px;line-height:25px;}
+#login_box ul li span{width:100px;}
+#login_box ul li {text-align:center;height:35px;}
+#login_box ul li #login_btn,#login_box a{background:url("../../img/my/20130415i.png") no-repeat;}
+#login_box ul li #login_btn{background-position:0 -132px;width:52px;height:27px;line-height:27px;text-align: center;color:#F7F7F7;display: inline-block;margin:5px 0 0 0;}
+#login_box ul li.password_dis{position: absolute;top: 55px;left: 21px;}
+#login_box ul li.password_dis_hide{display:none;}
+#login_box ul li input{color: rgb(153, 153, 153);width: 149px;}
+/*top menu end*/
+
+.logo{position: absolute;top: 10px;}
+
+.header_menu li{margin-left:18px;float:left;font-family:"Microsoft Yahei";font-size:14px;font-weight:700;font-size:18px;}
+.header_menu li a{float:left;height:44px;overflow:hidden;color:#bbb;line-height: 44px;}
+.header_menu li.cur a span{color:#F84249}
+

@@ -1,0 +1,45 @@
+.cart_list_head_item{height:40px;line-height:40px;text-align:center;background-color:#F5F5F5;border-left:1px solid #FFFFFF;width: 132px;} 
+.cart_list_head_item_name{height:40px;line-height:40px;text-align:center;background-color: #f3f3f3;width:424px;} 
+
+.cart_list_body{height:80px;}
+.cart_list_body_item{height:80px;border-bottom:1px solid #ddd;background-color:#fff;
+	width:121px;line-height:80px;text-align:center;}
+.cart_list_body_noitem{height:80px;border-bottom:1px solid #AAAAAA;background-color:#fff;
+	line-height:80px;text-align:center;font-size:16px;font-family:"Microsoft Yahei";}
+.cart_list_body_item_name{
+	height:80px;
+	border-bottom:1px solid #ddd;background-color:#fff;width:424px;
+	}
+.cart_list_body_item_name .p-name{width:340px;height:75px;overflow:hidden;word-break:break-all;word-wrap:break-word;margin-top:5px;margin-left:4px;}
+.cart_list_body_item_name .p-img{width:80px;height:80px;padding:10px 0 0 0;text-align:center;}
+.cart_list_body_item_name .p-name span{color:#005AA0}
+.foot_delete_div b,.cart_to_phone,.decrement,.increment{background:url("../../img/my/20130415i.png") no-repeat;}
+.cart_list_foot{height:60px;background-color:#F5F5F5;}
+.foot_delete_div{margin-left:20px;margin-top:15px;font-size:12px;}
+.foot_delete_div a{line-height: 30px;}
+.foot_delete_div a:hover{text-decoration:none;}
+.foot_delete_div b{background-position: -288px -31px;width: 9px;height: 9px;display:inline-block;}
+.foot_delete_div span{color:#005AA0;}
+.foot_info_div{height:60px;line-height:60px;font-size:16px;font-family:"Microsoft Yahei";}
+.phone_key{ color:#FF0000; }
+.phone_desc{ width:150px; }
+
+.cart_to_phone{background-position:-180px -25px; width:82px;height:30px;line-height:30px;text-align:center;font-family:"Microsoft Yahei";color:#FF4A52;}
+
+#cartList li{padding:20px 0px;height:60px;font-family:Microsoft Yahei;}
+#cartList li p{float: left;height: 60px;line-height: 20px;}
+.c_pro_img,.c_pro_name{padding:0 10px;color:#999;}
+.c_pro_img,.c_pro_img img{width:60px;height:60px;}
+.c_pro_name{width:329px;overflow:hidden;}
+
+.pro_num_div{width:80px;height:25px;display: block;margin: auto;margin-top: 18px;}
+.decrement,.increment{width: 18px;height: 13px;margin-top: 4px;display: block;overflow: hidden;line-height: 100px;}
+.decrement{float: left;background-position: -282px -108px;}
+.increment{float: right;background-position: -282px -121px;}
+.quantity-text{width: 34px;height: 18px;border: 1px solid #ddd;border-top-color: #aaa;border-left-color: #aaa;padding-top: 2px;overflow: hidden;text-align: center;background-color: #fff;}
+
+
+
+#cartList li p.c_pro_price,#cartList li p.c_pro_num,#cartList li p.c_pro_price_t,#cartList li p.c_pro_del{width:132px;text-align:center;line-height: 60px;}
+
+

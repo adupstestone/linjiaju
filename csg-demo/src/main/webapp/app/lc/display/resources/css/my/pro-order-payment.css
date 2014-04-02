@@ -1,0 +1,52 @@
+.pay_on_line_res{
+padding: 20px;
+background-color: #fff8ee;
+border-bottom: 1px solid #ffe8c4;
+color: #545351;
+font-size: 14px;
+}
+.pay_on_line_res dt{
+padding-bottom: 10px;
+font-size: 18px;
+font-weight: bold;
+}
+.pay_on_line_res dt strong{
+color:#F6363E;
+}
+.bottom_button{float:right;padding:10px 0;height: 40px;}
+
+.order_body_content2{ margin:30px 20px;border:1px solid #efefef; }
+.order_body_content2 .content2_title{ 
+	background:#F5F5F5;
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #efefef;
+	padding-left: 10px;
+	font-size:12px; 
+	font-weight:bold;
+	margin-bottom:20px;
+ }
+ 
+ .content2_body .item{
+ 	margin:5px 30px;
+ }
+ .item_title1{
+ 	height:30px;
+ 	font-weight:bold;
+ }
+.item_content1{
+	margin-left:40px;
+}
+
+.item_content3{
+	margin-left:40px;
+	height:40px;
+}
+
+.account_table{
+	border-collapse:collapse;
+	width:100%;
+	border:1px solid #efefef;
+}
+.account_table .tr_title{background:#F5F5F5;}
+.account_table tr td{text-align:center}

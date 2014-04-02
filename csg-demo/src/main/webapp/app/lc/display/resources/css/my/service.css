@@ -1,0 +1,31 @@
+/*
+.search b{background:url("../../img/my/icons.png") no-repeat;}
+.list li .buttons a{background:url("../../img/my/20130415i.png") no-repeat;}
+.pro_sort b {background: url(../../img/my/i2012052801.png) no-repeat;}
+
+.filter{font-family:Microsoft Yahei;border: 1px solid #eee;padding: 10px;background-color: #fff;border-color: #eee #eee #fff #eee;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+* html .filter{font-family:Microsoft Yahei;border: 1px solid #eee;padding: 10px 10px 30px 10px;background: #fafafa;}
+*+html .filter{font-family:Microsoft Yahei;border: 1px solid #eee;padding: 10px 10px 30px 10px;background: #fafafa;} 
+.filter span.title{float:left;padding: 3px;}
+.filter .item_ul{float:left;width: 800px;}
+.filter .item_ul li{float:left;padding: 3px 6px;height:25px;white-space:nowrap;}
+.filter .item_ul li a{color:#999;}
+.filter .item_ul li a.selected{color:#F6363E}
+
+
+.dir_title{color:#999;line-height: 35px;font-family: microsoft yahei;font-size: 14px;}
+.search{position:relative;height:28px;border: 1px solid #eee;margin: 2px 0 8px 0;width:200px;}
+.search input[type='text']{height: 26px;line-height: 26px;width: 168px;border: none;border:#fff;outline: none;}
+* html .search input[type='text']{height: 22px;} 
+*+html .search input[type='text']{height: 22px;}
+.search b{position: absolute;width: 20px;height: 20px;display: inline-block;margin:4px;background-position: -263px -32px;cursor:pointer;}
+.search b:hover{background-position: -243px -32px;}
+*/
+
+.list li{border: 1px solid #eee;height:120px;position: relative;float:left;text-align: center;width:178px;padding: 50px 4px 9px 4px;margin:2px 2px;cursor:pointer;background-color:#F7F7F7;}
+.list li:hover{border: 1px solid #eee;background-color: #fff;border-color: #eee #eee #fff #eee;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+/* * html .list li:hover{border: 1px solid #eee;padding: 9px 4px;background-color: #fff;}
+*+html .list li:hover{border: 1px solid #eee;padding: 9px 4px;background-color: #fff;} */
+.list li .s_name{text-align:center;overflow:hidden;height:36px;margin: 10px 0 0 0;line-height: 17px;font-size: 16px;font-family: Microsoft Yahei;}
+.list li img{width:50px;height:50px;}
+.list li img:hover{opacity: .8;filter: alpha(opacity=80);}

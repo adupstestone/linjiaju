@@ -1,0 +1,83 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,b,form,fieldset,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+img{border:none}
+img,input,select{vertical-align:middle}
+.hide{display:none}
+.left{float:left}
+.right{float:right}
+.clear{clear:both}
+.textcenter{text-align:center;}
+ul,li{list-style:none}
+div,ul,dl{zoom:1}
+a:{cursor:pointer}
+a:link,a:visited{color:#000;text-decoration:none;cursor:pointer}
+a:hover,.aorange a:hover,.ablue a:hover{color:#c80000;text-decoration:underline;cursor:pointer}
+html{_background-image:url(about:blank);_background-attachment:fixed}
+b{text-decoration:none;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#535353;line-height:24px;}
+
+.but_black,.but_black b,.login_register #login_btn,.login_register #register_btn,.login_register #register{ background: url(../../img/my/buttons.png) no-repeat;}
+
+.common_out_div{padding:20px;}
+.common_out_div #brandShow{width:560px;border:1px solid #eee;}
+.common_out_div #brandShow ul li{margin:10px;margin-top:2px;padding: 0px;text-align: center;display: block;width:60px;}
+.common_out_div #brandShow ul li a{color:#999;font-size:14px;font-family:Microsoft Yahei;}
+.common_out_div #brandName{height:22px;line-height:22px;}
+.common_out_div label{font-size:14px;font-family:Microsoft Yahei;text-align:right;width:70px;display:inline-block;word-spacing:22px;}
+.but_red,.add_a,.sub_a{background:url("../../img/my/20130415in.png") no-repeat;cursor:pointer;}
+.add_a{background-position:-283px -69px;width:16px;height:16px;line-height:27px;display:inline-table;vertical-align: middle;margin-left:8px;}
+.sub_a{background-position:-283px -88px;width:16px;height:16px;line-height:27px;display:inline-table;vertical-align: middle;margin-left:8px;}
+.add_a:hover{background-color:#eee;}
+.sub_a:hover{background-color:#eee;}
+.but_red{background-position:0 -132px;width:52px;height:27px;line-height:27px;text-align: center;color:#F7F7F7;display: inline-block;vertical-align:-1px;font-family: Microsoft Yahei;}
+* html .but_red{vertical-align:1px;}
+*+html .but_red{vertical-align:1px;}
+.but_black{font-size:14px;font-family:Microsoft Yahei}
+.but_black b{display: inline-block;width:16px;height:16px;vertical-align:middle;background-position:-337px -45px;}
+.but_black{background-position: 0px -84px;height: 39px;line-height: 39px;display: inline-block;width: 110px;color: #fff;text-align: center;}a.but_black{color:#fff;}
+
+.fileset .add_a{margin-left:0;}
+
+.conditions {padding:10px;}
+.conditions li{float:left;margin-right:20px;height:30px;}
+.conditions label{font-size:12px;width:70px;display: inline-block;}
+.conditions input{width:200px;}
+.conditions input.text{width: 198px;height:20px;border: 1px solid #A4BED4;}
+.conditions #search,.conditions #queryBtn{color:#fff}
+.conditions .inputs{width:600px;}
+
+.glass_ddd_div {background-color: #fff;border-color: #eee #eee #eee #eee;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+.glass_blue_div {background-color: #fff;border-color: #0199EE #0199EE #0199EE #0199EE;-moz-box-shadow: 0 0 30px #8BCFF6;-webkit-box-shadow: 0 0 30px #8BCFF6;box-shadow: 0 0 30px #8BCFF6;}
+.glass_green_div {background-color: #fff;border-color: #B9DC4E #B9DC4E #B9DC4E #B9DC4E;-moz-box-shadow: 0 0 30px #B9DC4E;-webkit-box-shadow: 0 0 30px #B9DC4E;box-shadow: 0 0 30px #B9DC4E;}
+
+.login_register input[type="text"]{outline:none}
+.login_register input[type="password"]{outline:none}
+.login_register .outer_div{margin: 0 auto;}
+.login_register .outer_div .logo_div{padding:20px 0;}
+.login_register img{border:none;}
+.login_register .form_div{padding: 20px 20px 45px 20px;background-color:#fff;border:1px solid #eee;}
+.login_register .li{height: 50px;}
+.login_register .label{float: left;word-spacing:11px;width: 70px;line-height: 40px;font-family:Microsoft Yahei;color:#666;font-size:16px;}
+.login_register .inputOuter,.login_register .inputVcOuter{background: url(../../img/my/txicon.png) no-repeat;}
+.login_register .inputOuter {float:left;width: 272px;height: 42px;background: url(../../img/my/txicon.png) no-repeat;}
+.login_register .inputOuter.blur{background-position: -1px -1px;}
+.login_register .inputOuter.focus{background-position: -1px -45px;}
+.login_register .inputStyle,.login_register .inputVcStyle{position: relative;top: 2px;left: 2px;height: 18px;padding: 11px 0 11px 10px;line-height: 18px;border: none;background: none;color: #333;font-family: Verdana,Tahoma,Arial;font-size: 16px;ime-mode: disabled;}
+.login_register .inputStyle {width: 258px;}
+.login_register .inputVcOuter{float:left;width:90px;height:42px;background-position: -185px -136px;}
+.login_register .inputVcOuter.blur{background-position: -186px -136px;}
+.login_register .inputVcOuter.focus{background-position: -3px -92px;}
+.login_register .inputVcStyle{width:80px;}
+.login_register .button_bottom{width:235px;margin:0 auto;}
+.login_register #login_btn{width:103px;height:40px;display:block;background-position:0 0;}
+.login_register #login_btn:hover{background-position:-112px 0;}
+.login_register #login_btn:active{background-position:-224px 0;}
+
+.login_register #register_btn{width:103px;height:40px;display:block;background-position:0 -128px;}
+.login_register #register_btn:hover{background-position:-112px -128px;}
+.login_register #register_btn:active{background-position:-224px -128px;}
+.login_register #register_btn{text-align: center;line-height: 40px;font-family:Microsoft Yahei;font-size:18px;text-decoration:none;word-spacing:5px;color:#fff;}
+
+.login_register #register{width:118px;height:39px;display:block;background-position:0 -263px;}
+.login_register #register:hover{background-position:-123px -263px;}
+.login_register #register:active{background-position:-245px -263px;}
+.login_register #register{margin: 0 auto;line-height:39px;font-family:Microsoft Yahei;font-size:18px;text-decoration:none;word-spacing:5px;color:#fff;}

@@ -1,0 +1,12 @@
+ul,li{list-style:none}
+#logo{float:left;margin-top: -8px;}
+.province_list{float:right;}
+#addrlist{margin:0 auto;width:900px;margin-top:30px;}
+#addrlist ul li{float:left;width:60px;height:38px;text-align:center;line-height:35px;border:1px solid #fff;background: url(../../img/my/txicon.png) no-repeat;background-position: -191px -183px;width:60px;height:38px;}
+#addrlist ul li:hover{background:#fff;}
+#addrlist ul li a{font-size:16px;font-family:Microsoft Yahei;text-decoration:none;color:#666;}
+#addrlist ul li:hover a{color:#B80625;font-size:20px;}
+.content{width:1000px;position:relative;margin:0px auto 0px auto;height:600px}
+.clear{clear:both;}
+#index_if{border:none;overflow:hidden;border:0;}
+

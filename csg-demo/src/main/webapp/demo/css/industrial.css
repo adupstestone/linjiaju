@@ -1,0 +1,12 @@
+.rds_grdt{position: relative;border: #f1f1f1 1px solid;cursor: pointer;background: url(../images/btnPlanBg1.png) repeat-x;background: -moz-linear-gradient(top, #ffffff, #fbfbfb 35%, #f9f9f9 60%, #f8f8f8 80%, #f7f7f7 100%);background: -webkit-linear-gradient(top, #ffffff, #fbfbfb 35%, #f9f9f9 60%, #f8f8f8 80%, #f7f7f7 100%);background: -o-linear-gradient(top, #ffffff, #fbfbfb 35%, #f9f9f9 60%, #f8f8f8 80%, #f7f7f7 100%);-moz-border-radius: 5px;-webkit-border-radius: 5px;-ms-border-radius: 5px;border-radius: 5px;}
+
+.list li .img{float:left}
+.list li .content{color:#B69082;float: left;width: 700px;margin: 20px 10px 20px 20px;font-size: 16px;font-family: Microsoft Yahei;padding: 10px;}
+.list li .content:hover{color:#916554;border:#FFF2E9 1px solid;}
+.list li .name{color:#333;float: left;padding: 0 10px 5px 0;font-size: 60px;height: 60px;line-height: 60px;}
+.list li .detail{float: left;width: 435px;height: 160px;padding: 20px;}
+.list li img{width:200px;height:200px;}
+.list li img:hover{opacity: .8;filter: alpha(opacity=80);}
+
+.industrial_manager{color:#916554;font-size:20px;background-color:#FFF2E9;width:100%;font-family:Microsoft Yahei;padding:20px;line-height:20px;}
+.industrial_manager .phone_number{color:#F84249;font-family: Georgia;}

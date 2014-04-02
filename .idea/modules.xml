@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/csg-demo/csg-demo.iml" filepath="$PROJECT_DIR$/csg-demo/csg-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linjiaju.iml" filepath="$PROJECT_DIR$/linjiaju.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocean/ocean.iml" filepath="$PROJECT_DIR$/ocean/ocean.iml" />
+    </modules>
+  </component>
+</project>
+

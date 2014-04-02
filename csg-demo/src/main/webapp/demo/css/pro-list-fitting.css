@@ -1,0 +1,42 @@
+.search b,.list li b.sign{background:url("../images/icons.png") no-repeat;}
+.list li .buttons a{background:url("../images/20130415i.png") no-repeat;}
+.pro_sort b {background: url(../images/i2012052801.png) no-repeat;}
+
+.filter{font-family:Microsoft Yahei;border: 1px solid #eee;padding: 10px;background-color: #fff;border-color: #eee #eee #eee #eee;-moz-box-shadow: 0 0 10px #DDD;-webkit-box-shadow: 0 0 10px #DDD;box-shadow: 0 0 10px #DDD;}
+* html .filter{font-family:Microsoft Yahei;border: 1px solid #eee;padding: 10px 10px 30px 10px;background: #fafafa;}/*6*/  
+*+html .filter{font-family:Microsoft Yahei;border: 1px solid #eee;padding: 10px 10px 30px 10px;background: #fafafa;}/*7*/  
+.filter span.title{float:left;padding: 3px;}
+.filter .item_ul{float:left;width: 800px;}
+.filter .item_ul li{float:left;padding: 3px 6px;height:25px;white-space:nowrap;}
+.filter .item_ul li a{color:#999;}
+.filter .item_ul li a.selected{color:#F6363E}
+
+.dir_title{color:#999;line-height: 35px;font-family: microsoft yahei;font-size: 14px;}
+
+.pro_sort {background-color: #f7f7f7;border-width: 1px 1px 1px 1px;border-style: solid;border-color: #eee;height: 36px;margin-top: 10px;}
+.pro_sort ul {margin: 4px 0 0 4px;}
+.pro_sort li {float: left;margin-right: 6px;cursor: pointer;}
+.pro_sort .notsel_li {background: #fff;border: 1px solid #ddd;}
+.pro_sort .order_btn {padding: 0 20px;text-align: center;}
+.pro_sort .up, .phone_order .down {position: relative;}
+.pro_sort .select_li {background:#F84249;color: #fff;border: 1px solid #FFA6BB;}
+.pro_sort b {position: absolute;top: 6px;right: 5px;width: 9px;height: 11px;font-size: 0px;}
+.pro_sort .up b {background-position: 0 -25px;margin-left: 5px;}
+.pro_sort .down b {background-position: 0 -14px;}
+
+
+.list li{position: relative;float:left;height: 250px;text-align: center;width: 200px;padding: 10px 5px;margin:10px 15px;cursor:pointer;}
+.list li:hover{border: 1px solid #eee;padding: 9px 4px;background-color: #fff;border-color: #eee #eee #eee #eee;-moz-box-shadow: 0 0 10px #bbb;-webkit-box-shadow: 0 0 10px #bbb;box-shadow: 0 0 10px #bbb;}
+* html .list li:hover{border: 1px solid #eee;padding: 9px 4px;background-color: #fff;}
+*+html .list li:hover{border: 1px solid #eee;padding: 9px 4px;background-color: #fff;}
+.list li b.sign{z-index: 2;position: absolute;left:5px;top:10px;width: 48px;height: 18px;line-height: 18px;color: #fff;text-indent: -9px;text-align: center;background-position: -289px -32px;font-family: Microsoft Yahei;}
+.list li .summ_title{text-align:left;overflow:hidden;height:36px;margin: 10px 0 0 0;line-height: 17px;}
+.list li .price{color:#F6363E;font-size:14px;text-align:left;font-weight:bold;font-family:verdana;}
+.list li .price .m_p{text-decoration: line-through;color:#666;margin-right:10px;}
+.list li img{width:160px;height:160px;}
+.list li img:hover{opacity: .8;filter: alpha(opacity=80);}
+.list li .buttons a{display: inline-block;cursor:pointer;color:#666;}
+.list li .buttons a:hover{color:#000;}
+.list li .buttons .add_cart{background-position: -103px -78px;width:80px;height:22px;line-height: 20px;}
+.list li .buttons .to_compare{background-position: -180px -56px;width: 40px;height: 22px;line-height: 20px;padding-left: 19px;}
+.list li .buttons .to_compare.checked{background-position: 0px -78px;color:#fff;}

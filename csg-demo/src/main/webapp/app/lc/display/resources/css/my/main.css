@@ -1,0 +1,207 @@
+/*.ad_title{
+padding: 25px 0 10px;
+font-size: 18px;
+color: #545351;
+}
+.ad_title a{
+color: #545351;
+}*/
+.ad_title a.sub {
+display: inline-block;
+float: right;
+font-size: 12px;
+color: #545351;
+font-weight: normal;
+}
+.ad_l {
+width: 670px;
+}
+.ad_l h2{
+margin: 20px 0 5px 0px;
+font-family:Microsoft Yahei;
+}
+
+.ad_l_img {
+height: 629px;
+}
+.ad_l_img li {
+width: 667px;
+
+border: 1px solid #e3e3e3;
+}
+
+.ad_r {
+width: 280px;
+font-family:Microsoft Yahei;
+}
+.ad_r h2{
+margin: 20px 0 5px 0px;
+font-family:Microsoft Yahei;
+}
+.ad_r h2 a{
+color:#666;
+}
+.ad_r_notice{
+margin-bottom: 10px;
+width: 280px;
+height: 136px;
+overflow: hidden;
+}
+.ad_r_phone a.button_round{
+-webkit-border-radius:14px;-moz-border-radius:14px;
+width: 80px;
+height: 25px;
+font-size: 12px;
+line-height: 25px;}
+
+.ad_r_phone{
+float: left;
+width: 253px;
+height: 203px;
+padding-left: 25px;
+border: 1px solid #e1e1e1;
+overflow: hidden;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+-khtml-border-radius: 2px;
+border-radius: 2px;}
+.ad_r_phone h3 {
+height: 26px;
+font-size: 24px;
+font-weight: bold;
+color: #545351;
+}
+.ad_r_phone p.item1 {
+width: 168px;
+font-size: 12px;
+line-height: 20px;
+color: #7e7e7e;
+margin-bottom: 10px;
+word-break: break-all;
+word-wrap: break-word;
+}
+.ad_r_phone p.item1 em {
+color: #545351;
+font-weight: bold;
+font-style:normal;
+}
+.ad_r_phone p.item2{
+margin: 10px 0 0;
+height: 16px;
+line-height: 16px;
+}
+.ad_r_phone p.item2 a{
+color: #fa7a22;
+}
+.btn_buynow_red {
+background-color: #fa7a20;
+}
+.btn_buynow_red {
+display: inline-block;
+padding: 0 10px;
+width: 60px;
+height: 22px;
+line-height: 22px;
+color: #fff;
+font-size: 12px;
+text-align: center;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+.ad_r .news{
+padding: 15px 20px;
+height: 34px;
+background-color: #fafafa;
+overflow: hidden;
+border: 1px solid #e1e1e1;line-height: 18px;
+}
+.ad_r .news li{
+width:109px;
+float: left;
+padding: 0 0 0 10px;
+background-position: 0 -54px;
+}
+.ad_r .news li a{
+color:#888;
+}
+
+.main_pro_list .filter_title {
+margin: 10px 0;
+height: 34px;
+line-height: 34px;
+background-color: #f4f4f4;
+color: #7e7e7e;
+text-indent: 10px;
+}
+
+.main_pro_list .filter_title dt{
+	float:left;
+color: #545351;
+font-weight: bold;
+font-size: 14px;
+}
+.main_pro_list .filter_title dd{
+float: left;
+margin-left: 0;height: 34px; line-height: 34px; overflow: hidden;
+}
+.main_pro_list .filter_title dd a{
+color:#888;margin:0 5px;
+}
+
+.main_pro_list .filter_content{
+border-width: 1px 0 0 1px;
+border-style: solid;
+border-color: #e1e1e1;
+}
+.main_pro_list .filter_content li {
+float: left;
+overflow: hidden;
+border-width: 0 1px 1px 0;
+border-style: solid;
+border-color: #e1e1e1;
+background: url(http://p.www.xiaomi.com/images/loading.gif) no-repeat center;
+}
+.main_pro_list .filter_content li:hover {
+opacity: .8;
+filter: alpha(opacity=80);
+}
+.main_pro_list .filter_content li.b_img_li{width:478px;height: 316px;}
+.main_pro_list .filter_content li.s_img_li{width:190px;height: 236px;}
+.main_pro_list .filter_content li.s_img_li.trend{width:193px;}
+.main_pro_list .filter_content li.s_img_li{line-height:18px;}
+.main_pro_list .filter_content li.s_img_li .img_dt a {
+display: block;
+height: 185px;
+line-height: 185px;
+overflow: hidden;
+text-align: center;
+vertical-align: middle;
+_font-size: 240px;
+}
+.main_pro_list .filter_content li.s_img_li .img_dt img {vertical-align: middle;}
+* html .main_pro_list .filter_content li.s_img_li .img_dt img {margin-top:30px;}
+*+html .main_pro_list .filter_content li.s_img_li .img_dt img {margin-top:35px;}
+.main_pro_list .filter_content li.s_img_li .info_dd_1,.main_pro_list .filter_content li.s_img_li .info_dd_2{padding: 0 20px;}
+.main_pro_list .filter_content li.s_img_li .info_dd_2 span {text-decoration: line-through;margin-right: 10px;}
+.main_pro_list .filter_content li.s_img_li .info_dd_2 strong {color: #f18336;font-weight: normal;}
+.main_pro_list .filter_content li.s_img_li .info_dd_2 em {font-style: normal;}
+
+.main_pro_list .filter_content li.s_img_li .info_dd_1{position:relative;}
+.main_pro_list .filter_content li.s_img_li .info_dd_1 a{color:#999;}
+.info_dd_1 b{background-image: url("../../img/my/icons.png");background-repeat: no-repeat;}
+.main_pro_list .filter_content li.s_img_li .info_dd_1 b{
+position: absolute;
+left: 20px;
+top: -24px;
+width: 48px;
+height: 18px;
+line-height: 18px;
+color: #fff;
+text-indent: -9px;
+text-align: center;
+background-position: -289px -32px;font-family:Microsoft Yahei;}
+
+.right {
+    float: right;
+}

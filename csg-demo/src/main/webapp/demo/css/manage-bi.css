@@ -1,0 +1,17 @@
+.table table td b.g_y,.table table td b.g_g,.table table td b.g_r{background: url(../images/newicon20120718.png) no-repeat;}
+.table td{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF5F6',endColorstr='#FDF2F3',GradientType=0);background: -moz-linear-gradient(top,#FFF5F6 0,#FDF2F3 100%);background: -webkit-linear-gradient(top,#FFF5F6 0,#FDF2F3 100%);background: -o-linear-gradient(top,#FFF5F6 0,#FDF2F3 100%)}
+.table{width: 930px;margin: 0 auto;margin-top:10px;}
+.chart{width: 952px;margin: 0 auto;}
+.table table{width:100%;width:100%;border-collapse:collapse;}
+.table table th,.table table td{border:solid #fff 1px;}
+.table table th{text-align:right;background-color:#FFCBD0;color:#fff;text-align:center;height: 28px;}
+.table table td{text-align:right;padding:0 10px;}
+.table table td.group_name{text-align:left;}
+.table table tr:hover td{background:#FCEDEE;}
+.table table tr td:hover{background:#fef9f9;cursor:pointer;}
+.table table td.g{text-align:center;}
+.table table td b.g_y,.table table td b.g_g,.table table td b.g_r{width:16px;height:16px;display:inline-block;vertical-align: middle;}
+.table table td b.g_r{background-position:-119px -124px;}
+.table table td b.g_g{background-position:-156px -124px;}
+.table table td b.g_y{background-position: -194px -124px;}
+.chart_div{width:450px; height:300px;border:1px solid #efefef;margin:10px 12px;}

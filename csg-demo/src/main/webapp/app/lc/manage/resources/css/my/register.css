@@ -1,0 +1,12 @@
+body{background-color:#F9F9F9}
+#registerForm .label{width:95px;}
+#registerForm b{color:red;font-size:12px;font-weight:normal;width:10px;float: left;height: 42px;line-height: 42px;padding-right: 10px;}
+#registerForm textarea{width: 268px;margin-left: 2px;margin-top: 3px;height: 100px;}
+#registerForm .li{height:45px;}
+#registerForm li.textarea{height:115px;}
+#registerForm li .msg{line-height:40px;color:#ddd;}
+.outer_div{width:742px;}
+.form_div{width:700px;}
+.notInput{margin-top:8px;}
+#register select{position:relative;left:-2px;top:-2px;font-size:12px;width:183px;line-height:14px;border:0px;color:#909993;}
+

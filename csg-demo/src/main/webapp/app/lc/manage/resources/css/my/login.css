@@ -1,0 +1,9 @@
+body{background-color:#EDF5FC;}
+.outer_div{width:860px;}
+.form_div{width:380px;}
+#change_code_img{margin-top:1px;}
+.rememberMe_label{float: left;word-spacing: 8px;width:120px;line-height: 40px;font-family:Microsoft Yahei;color:#666;font-size:16px;}
+.img_bg{background:url("../../img/my/login_bg.png") no-repeat;width:530px;height:350px;display:inline-block;position:absolute;bottom:2px;left:60px;}
+.txt_bg{background:url("../../img/my/login_bg_t.png") no-repeat;width:250px;height:120px;display:inline-block;position:absolute;top:10px;left:60px;}
+.login_div{margin-top:100px;}
+.div_top{width:360px;border: 1px solid #eee;height:43px;border-bottom:none;border-bottom:0;background: #63A4E6;color: #fff;padding: 0 30px;line-height: 43px;font-family:Microsoft Yahei;font-size:16px;}

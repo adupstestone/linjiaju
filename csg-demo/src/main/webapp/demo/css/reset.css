@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td { padding:0; margin:0;}
+/*body { Line-height:1.5}*/
+table { border-collapse:collapse; border-spacing:0;}
+fieldset,img { border:0;}
+address,caption,cite,code,dfn,em,strong,th,var { font-weight:normal; font-style:normal;}
+ul,ol,li,dl,dt,dd { list-style:none;}
+caption,th { text-align:left;}
+Blockquote:before,blockquote:after,q:before,q:after { content:”;}
+abbr,acronym { border:0;} ﻿
+a{ color:#2e7dc6; text-decoration:none;}
+a:link,a:visited,a:hover { text-decoration:none;}
+.clear{ clear:both}
+
+/*---公共元素---*/
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; font-size: 100%;}
+body {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #535353;
+    line-height: 24px;
+}
+input,textarea,button,a{outline:0}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,fieldset,textarea{margin:0}
+fieldset,legend,textarea,input{padding:0}
+textarea,input{color:#666}
+textarea::-webkit-input-placeholder,input::-webkit-input-placeholder{color:#a3a3a3}
+textarea:-moz-placeholder,input:-moz-placeholder{color:#a3a3a3}
+textarea::-moz-placeholder,input::-moz-placeholder{color:#a3a3a3}
+textarea:-ms-input-placeholder,input:-ms-input-placeholder{color:#a3a3a3}
+textarea{resize:none;overflow-y:scroll}
+ul,ol{padding-left:0;list-style-type:none}
+a img,fieldset{border:0}
+a{color:#999;text-decoration:none}/*color:#2e7dc6*/
+a:hover{text-decoration:none; color:#ed6d00;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden]{display:none}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;*font-family:"Microsoft YaHei","微软雅黑",Helvetica,"黑体",Arial,Tahoma}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{box-sizing:content-box;-moz-box-sizing:content-box;-webkit-appearance:textfield;-webkit-box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}	

@@ -1,0 +1,22 @@
+
+element.style {
+    color: #FFFFFF;
+}
+a:link, a:visited {
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+}
+.button_ok {
+    background-image: url("../../img/my/buttons.png");
+    background-position: 0 -170px;
+    background-repeat: no-repeat;
+    display: block;
+    font-family: Microsoft Yahei;
+    font-size: 16px;
+    font-weight: bold;
+    height: 41px;
+    line-height: 41px;
+    margin: 0 auto;
+    width: 103px;
+}
