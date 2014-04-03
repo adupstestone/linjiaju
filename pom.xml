@@ -8,6 +8,7 @@
     <modules>
         <module>ocean</module>
         <module>csg-demo</module>
+        <module>ocean</module>
     </modules>
     <name>linjiaju Maven Webapp</name>
     <url>http://maven.apache.org</url>
