@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=7"/>
+    <title>渴切v3.3</title>
+    <meta name="keywords" content="渴切,中文css框架,css框架,开源css框架,css框架下载"/>
+    <meta name="description"
+          content="渴切是一个开源中文 (X)HTML/CSS 框架 ,它的目的是减少你的css开发时间。它提供一个可靠的css基础去创建你的项目,能够用于网站的快速设计,通过重设和重建浏览器标准，可以让每个网站防 止枯燥的跨浏览器兼容性测试。"/>
+    <meta name="author" content="keqie,keqie@keqie.com">
+    <link rel="stylesheet" href="assets/css/cutter.css">
+    <link rel="stylesheet" href="css/addons.css">
+    <!--[if ie 6]>
+    <link rel="stylesheet" href="assets/css/ie6.css">
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <![endif]-->
+    <script src="assets/js/jquery-1.3.2.min.js"></script>
+    <script src="assets/js/cutter.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+<body>
+<div class="kq-naver">
+    <div class="kq-wrapper">
+        <div class="kq-naver-collapse">菜单</div>
+        <div class="kq-naver-brand"><a href="javascript:"><font class="danley">keqie</font> 渴切</a></div>
+        <div class="kq-naver-module">
+            <ul>
+                <li>
+                    <strong><a href="###">关注渴切</a></strong>
+
+                    <div class="kq-naver-droper">
+                        <a href="http://weibo.com/ikeqie" target="_blank">新浪微博</a>
+                        <a href="http://t.qq.com/ikeqie" target="_blank">腾讯微博</a>
+                        <a href="http://ikeqie.t.sohu.com/" target="_blank">搜狐微博</a>
+                        <a href="http://ikeqie.blog.163.com/" target="_blank">网易微博</a>
+                        <a href="http://www.douban.com/people/ikeqie/" target="_blank">豆瓣网</a>
+                        <a href="http://huaban.com/ikeqie" target="_blank">花瓣网</a>
+                        <a href="http://chonggou.net/group/cutter" target="_blank">重构网</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="kq-naver-sub"><a href="http://www.keqie.com">前往官网</a></div>
+    </div>
+</div>
+
+<div class="kq-heading">
+    <div class="kq-wrapper">
+        <h1>渴切<sup>v3.3</sup></h1>
+
+        <h2>渴切取自“Cutter”的谐音。翻译成中文是切割者的意思。它是一个基于html5/css3的开源中文响应式框架
+            ,它的目的是减少你的css开发时间。它提供一个可靠的css基础去创建你的项目,能够用于网站的快速设计,通过重设和重建浏览器标准，可以让每个网站防止枯燥的跨浏览器兼容性测试。响应支持ie6~ie8在内的所有浏览器和ipad，iphone等移动设备</h2>
+    </div>
+</div>
+
+<div class="kq-wrapper">
+
+    <div class="kq-row">
+        <div class="kq-col3">
+            <div class="phead">重要说明</div>
+            <div class="pbody">
+                关于cutter.css文件。为了更好的拆分框架的内容，让用户能够方便的使用框架的某一个部分。cutter.css核心文件代码中利用了 <code>@import url(&quot;icon.css&quot;);</code>的方式进行了调用。所以在使用本框架之前，需要有一点点css功底，并且建议将cutter.css源代码大致浏览一遍。
+            </div>
+        </div>
+        <div class="kq-col9">
+            <div class="phead">文件结构
+                <small>
+                    渴切-开源中文css框架基于<a href="http://code.google.com/p/thinkcss/">thinkcss</a>代码核心。在实际前端开发（css排版等）的时候，需要拷贝
+                    css, imgs ,js ,swf 文件到空白的项目文件夹里面，参照进行项目开发。
+                </small>
+            </div>
+            <div class="pbody">
+                我们已经整理了所有的文件压缩组合成一两个文件。
+       	    <pre> 渴切-开源中文css框架/    
+	├── assets/css/    
+	│   ├── cutter.css     
+	├── assets/js/
+	│   ├── jquery.js
+	│   ├── cutter.js    
+	└── img/        </pre>
+            </div>
+
+
+            <div class="phead">正确的渴切框架加载（推荐直接将下面代码拷贝到一个新建文档中）</div>
+            <div class="pbody">
+          	<pre>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;meta charset=&quot;gb2312&quot; /&gt;<br>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=7&quot; /&gt;<br>&lt;title&gt;渴切-响应css框架&lt;/title&gt;
+&lt;meta content=&quot;width=device-width,initial-scale=1&quot; name=&quot;viewport&quot;&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/cutter.css&quot;&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/addon.css&quot;&gt;
+&lt;!--[if lt IE 9]&gt;<br>&lt;script src=&quot;assets/js/html5.js&quot;&gt;&lt;/script&gt;<br>&lt;![endif]--&gt;
+&lt;script src=&quot;assets/js/jquery.js&quot;&gt;&lt;/script&gt; <br>&lt;script src=&quot;assets/js/cutter.js&quot;&gt;&lt;/script&gt; <br>&lt;/head&gt;	
+&lt;body&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</pre>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<div class="kq-wrapper">
+    <h1 class="phead">栅格系统
+        <small>默认12列的单元格栅格系统</small>
+    </h1>
+
+    <h2>先写一行<code>class="kq-row"</code>,行的里面写列<code>class="kq-col*"</code> kq-col1~kq-col12 被作为了栅格系统的12列格子的命名。</h2>
+<pre>&lt;div class=&quot;kq-row&quot;&gt;<br>	&lt;div class=&quot;kq-col8 &quot;&gt;
+	...
+	&lt;/div&gt;<br>	&lt;div class=&quot;kq-col4 &quot;&gt;
+	...
+	&lt;/div&gt;<br>  &lt;/div&gt;</pre>
+
+    <h2>演示</h2>
+
+    <div class="kq-row">
+        <div class="kq-col8 ">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col4 ">
+            <p class="bordered">&nbsp;</p>
+        </div>
+    </div>
+
+    <h2>实现栅格系统的多重嵌套,嵌套依然先写一行<code>class="kq-row"</code>,然后写列<code>class=&quot;kq-col*&quot;</code>,要实现多重嵌套依次在列kq-col*中写入行
+        kq-row,在里面接着写列kq-col*</h2>
+    <pre>&lt;div class=&quot;kq-row&quot;&gt;<br>	&lt;div class=&quot;kq-col8 &quot;&gt;<br>        &lt;div class=&quot;kq-row&quot;&gt;<br>        	&lt;div class=&quot;kq-col4&quot;&gt;<br>            	...<br>            &lt;/div&gt;<br>        	&lt;div class=&quot;kq-col4&quot;&gt;<br>            	...<br>            &lt;/div&gt;<br>        &lt;/div&gt;<br>	&lt;/div&gt;<br>	&lt;div class=&quot;kq-col4 &quot;&gt;<br>		...<br>	&lt;/div&gt;<br>  &lt;/div&gt;</pre>
+
+
+    <div class="kq-row">
+        <div class="kq-col8 ">
+            <div class="kq-row">
+                <div class="kq-col4">
+                    <p class="bordered">&nbsp;</p>
+                </div>
+                <div class="kq-col4">
+                    <p class="bordered">&nbsp;</p>
+                </div>
+            </div>
+        </div>
+        <div class="kq-col4 ">
+            <p class="bordered">&nbsp;</p>
+        </div>
+    </div>
+
+
+    <h2>完整的栅格系统演示</h2>
+
+    <div class="kq-row">
+
+        <div class="kq-col12 ">
+            <p class="bordered">&nbsp;
+            </p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col11">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col2">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col10">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col3">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col9">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col4">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col8">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col5">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col7">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col6">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col6">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col7">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col5">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col8">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col4">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col9">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col3">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+        <div class="clear"></div>
+        <div class="kq-col10">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col2">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col11">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="kq-wrapper">
+    <br/>
+    <hr/>
+    <h2>100%百分比格子系统，应使用者要求，新增了百分比的栅格系统，此演示仅为抛石引玉，百分比栅格系统经过测试在实际应用中还有很多问题需要解决，我们期待与使用者一同探讨解决！<font
+            color="red">项目使用需谨慎！</font> <code>.kq-row-percent</code></h2>
+
+<pre>&lt;div class=&quot;kq-row kq-row-percent&quot;&gt;
+...
+&lt;/div&gt;
+</pre>
+    <div class="kq-row kq-row-percent">
+        <div class="kq-col12 ">
+            <p class="bordered">&nbsp;
+            </p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col1">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col11">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col2">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col10">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col3">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col9">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col4">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col8">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col5">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col7">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col6">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col6">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col7">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col5">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col8">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col4">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="kq-col9">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col3">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+        <div class="clear"></div>
+        <div class="kq-col10">
+            <p class="bordered">&nbsp;</p>
+        </div>
+        <div class="kq-col2">
+            <p class="bordered">&nbsp;</p>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="kq-wrapper">
+    <h1 class="phead">排版
+        <small>默认设置,段落,标题,文本，对字体颜色，锚文本的下划线，颜色，字体做了重写，均采用了最符合中国网站体验的12号字体和 Verdana, Arial, Helvetica, sans-serif
+            字体。行距22px。这些重写参考了，盛大，腾讯，百度，新浪等众多网站对css重写的选择。
+        </small>
+    </h1>
+    <div class="kq-row">
+        <div class="kq-col4">
+            <h2>默认设置</h2>
+            采用了符合中国人阅读习惯的font-size:12px像素字体，行距line-height:22px像素。字体font-family:Verdana,Arial,Helvetica,sans-serif,
+            body背景background:white;
+        </div>
+        <div class="kq-col4">
+            <h2>段落排版</h2>
+
+            <p>级联样式表（Cascading Style Sheet）简称“CSS”，通常又称为“风格样式表（Style Sheet）”，它是用来进行网页风格设计的。</p>
+
+            <p>比如，如果想让链接字未点击时是蓝色的，当鼠标移上去后字变成红色的且有下划线，这就是一种风格。通过设立样式表，可以统一地控制HTML中各标志的显示属性。</p>
+        </div>
+        <div class="kq-col4">
+            <h2>标题排版</h2>
+
+            <h1>H1文本演示</h1>
+
+            <h2>H2文本演示</h2>
+
+            <h3>H3文本演示</h3>
+            <h4>H4文本演示</h4>
+            <h5>H5文本演示</h5>
+        </div>
+    </div>
+    <div class="kq-row">
+        <div class="kq-col12">
+            <h2>加粗，小号，大号，上标，下标</h2>
+
+            <div>
+                <table width="200" border="0" class="kq-table">
+                    <tr>
+                        <td>元素</td>
+                        <td>演示</td>
+                        <td>说明</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;strong&gt;</code></td>
+                        <td><strong>这是一段加粗的文字</strong></td>
+                        <td>&lt;strong&gt;...&lt;/strong&gt; &lt;b&gt;在w3c新标准中已经不建议使用了</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;u&gt;</code></td>
+                        <td><u>这是一段下划线的文字</u></td>
+                        <td>&lt;u&gt;...&lt;/u&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;em&gt;</code></td>
+                        <td><em>这是一段斜体的文字</em></td>
+                        <td>&lt;em&gt;...&lt;/em&gt; &lt;i&gt;在w3c新标准中已经不建议使用了</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;del&gt;</code></td>
+                        <td>
+                            <del>这是一段删除线文字</del>
+                        </td>
+                        <td>不赞成使用。使用&lt;del&gt;代替。</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;sup&gt;</code></td>
+                        <td>演示<sup>这是一段上标文字</sup></td>
+                        <td>定义上标字。</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;sub&gt;</code></td>
+                        <td>演示<sup>这是一段下标文字</sup></td>
+                        <td>定义下标字。</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;small&gt;</code></td>
+                        <td>演示
+                            <small>这是一段小号文字</small>
+                        </td>
+                        <td>定义小号字。</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;big&gt;</code></td>
+                        <td>演示<big>这是一段加大号文字</big></td>
+                        <td>定义加大号字。</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <h2>引用</h2>
+
+    <div class="kq-row">
+        <div class="kq-col2">
+            <div>引用常常被用于评论中，在网页中非常常见，用<code>&lt;blockquote&gt;</code>就可以轻松实现一段美观的引用。</div>
+        </div>
+        <div class="kq-col10">
+            <blockquote>级联样式表（Cascading Style Sheet）简称“CSS”，通常又称为“风格样式表（Style
+                Sheet）”，它是用来进行网页风格设计的。比如，如果想让链接字未点击时是蓝色的，当鼠标移上去后字变成红色的且有下划线，这就是一种风格。
+                <blockquote>通过设立样式表，可以统一地控制HTML中各标志的显示属性。级联样式表可以使人更能有效地控制网页外观。使用级联样式表，可以扩充精确指定网页元素位置，外观以及创建特殊效果的能力。
+                </blockquote>
+            </blockquote>
+        </div>
+    </div>
+    <h2>abbr</h2>
+
+    <div class="kq-row">
+        <div class="kq-col2">
+            <div>标签常常用于关键字tag等地方，用<code>&lt;abbr&gt;</code>就可以轻松实现。</div>
+        </div>
+        <div class="kq-col10"><abbr>css3</abbr> <abbr>html5</abbr></div>
+    </div>
+    <div class="kq-row">
+        <h2>列表</h2>
+
+        <div class="kq-col4">
+            <h2>无序列表</h2>
+
+            <p><code>ul</code></p>
+            <ul>
+                <li>无序列表是这样表现的</li>
+                <li>无序列表是点点点</li>
+                <li>无序列表是没有罗马文字的</li>
+            </ul>
+        </div>
+        <div class="kq-col4">
+            <h2>有序列表</h2>
+
+            <p><code>ol</code></p>
+            <ol>
+                <li>有序列表是这样表现的</li>
+                <li>有序列表不是是点点点</li>
+                <li>有序列表是有罗马文字的</li>
+            </ol>
+        </div>
+        <div class="kq-col4">
+            <h2>没有样式的</h2>
+
+            <p><code>&lt;ul class=&quot;unstyled&quot;&gt;</code></p>
+            <ul class="unstyled">
+                <li>没有样式是这样表现的</li>
+                <li>没有样式的列表什么也没有</li>
+                <li>没有样式比较干净</li>
+            </ul>
+        </div>
+    </div>
+    <div class="kq-row">
+        <div class="kq-col4">
+            <h2>圈圈</h2>
+
+            <p><code>&lt;ul class=&quot;circle&quot;&gt;</code></p>
+            <ul class="circle">
+                <li>圈圈列表是这样表现的</li>
+                <li>圈圈列表是圈圈的</li>
+                <li>圈圈列表跟点点很相似</li>
+            </ul>
+        </div>
+        <div class="kq-col4">
+            <h2>方块</h2>
+
+            <p><code>&lt;ul class=&quot;square&quot;&gt;</code></p>
+            <ul class="square">
+                <li>圈圈列表是这样表现的</li>
+                <li>圈圈列表是圈圈的</li>
+                <li>圈圈列表跟点点很相似</li>
+            </ul>
+        </div>
+        <div class="kq-col4">
+            <h2>中文123</h2>
+
+            <p><code>&lt;ul class=&quot;cjk&quot;&gt;</code></p>
+            <ul class="cjk">
+                <li>中文123样式是这样表现的</li>
+                <li>中文123样式的列表什么也没有</li>
+                <li>中文123样式是用汉字一二三排序的</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="kq-wrapper">
+    <h1 class="phead">代码
+        <small>代码区间</small>
+    </h1>
+    <div class="kq-row">
+        <div class="kq-col4">
+            <h2>一行代码</h2>
+            <pre>body{ background:white;}</pre>
+        </div>
+        <div class="kq-col4">
+            <h2>多行代码</h2>
+      <pre><ol>
+          <li>body{</li>
+          <li>background:white;</li>
+          <li>font-size:13px;</li>
+          <li>line-height:22px;</li>
+          <li>}</li>
+      </ol>
+</pre>
+      <pre class="unstyled">&lt;pre&gt;&lt;ol&gt;&lt;li&gt;body{&lt;/li&gt;
+&lt;li&gt;background:white;&lt;/li&gt;
+&lt;li&gt;font-size:13px;&lt;/li&gt;
+&lt;li&gt;line-height:22px;&lt;/li&gt;
+&lt;li&gt;}&lt;/li&gt;
+&lt;/ol&gt;&lt;/pre&gt;</pre>
+        </div>
+        <div class="kq-col4">
+            <h2>代码着色</h2>
+      <pre><ol>
+          <li class="pink">body{</li>
+          <li>background:white;</li>
+          <li>font-size:13px;</li>
+          <li>line-height:22px;</li>
+          <li class="pink">}</li>
+      </ol>
+</pre>
+      <pre class="unstyled">&lt;pre&gt;&lt;ol&gt;
+&lt;li class=&quot;pink&quot;&gt;body{&lt;/li&gt;
+&lt;li&gt;background:white;&lt;/li&gt;
+&lt;li&gt;font-size:13px;&lt;/li&gt;
+&lt;li&gt;line-height:22px;&lt;/li&gt;
+&lt;li class=&quot;pink&quot;&gt;}&lt;/li&gt;
+&lt;/ol&gt;&lt;/pre&gt;</pre>
+        </div>
+    </div>
+</div>
+<div class="kq-wrapper">
+    <h1 class="phead">表格
+        <small>表格的表框，间距等进行了重写让table更美观</small>
+    </h1>
+    <div class="kq-row">
+        <div class="kq-col4">
+            <h2>标记方式</h2>
+      <pre>&lt;table class=&quot;kq-table kq-table-bordered&quot;&gt;
+ &lt;tbody&gt;<br>  &lt;tr&gt;<br>   &lt;td&gt;/&lt;/td&gt;<br>   &lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>   &lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>  &lt;/tr&gt;
+ &lt;/tbody&gt;
+ &lt;tbody&gt;<br>  &lt;tr&gt;<br>   &lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>   &lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>   &lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>  &lt;/tr&gt;
+ &lt;/tbody&gt;
+ &lt;tfoot&gt;<br>  &lt;tr&gt;<br>   &lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>   &lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>   &lt;td&gt;&amp;nbsp;&lt;/td&gt;<br>  &lt;/tr&gt;
+ &lt;/tfoot&gt;<br>&lt;/table&gt;</pre>
+        </div>
+        <div class="kq-col8">
+            <h2>效果演示</h2>
+            <pre>&lt;table border=&quot;0&quot; class=&quot;kq-table&quot;&gt;</pre>
+            <table width="200" border="0" class="kq-table">
+                <tr>
+                    <td>/</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <h2>斑马表格
+                <small>加上<code>class="kq-table kq-table-zebra"</code>即可实现斑马表格</small>
+            </h2>
+            <table width="200" border="0" class="kq-table kq-table-zebra">
+                <tr>
+                    <td>/</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <h2>带边框的表格
+                <small>加上<code>class="kq-table bordered"</code>即可实现带边框的表格</small>
+            </h2>
+            <table width="200" border="0" class="kq-table kq-table-bordered">
+                <thead>
+                <tr>
+                    <td>/</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="selected">selected</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="kq-wrapper">
+    <h1 class="phead">表单
+        <small>对文本框等进行了重写</small>
+    </h1>
+    <div class="kq-row">
+        <div class="kq-col4">
+            <p><br/>
+                通过美化一些表单元素默认样式，例如文本框，按钮，下拉菜单等，让表单更美观。 <br>
+            </p>
+
+            <p>通过placeholder属性来完成，文本框的默认值，鼠标点击消失，失去光标，默认值恢复的效果。（改效果在firefox浏览器下可见）</p>
+        </div>
+        <div class="kq-col8">
+            <form action="" method="get" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>注册表单</legend>
+                    <p>
+                        <label>姓名
+                            <small>字符在3~9位</small>
+                        </label>
+                        <input name="" type="text" placeholder="请填写真实的姓名" class="kq-text">
+                        <input name="" type="text" placeholder="请填写真实的姓名" class="kq-text kq-text-radius">
+                    </p>
+                    <p>
+                        <label>自我介绍：</label>
+                        <textarea name="textarea" id="textarea" cols="45" rows="5"></textarea>
+                    </p>
+
+                    <p>
+                        <label>爱好：</label>
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        踢球
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        上网
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        冲浪 </p>
+
+                    <p>
+                        <label>性别：</label>
+                        <input type="radio" name="radio" id="radio" value="radio">
+                        男
+                        <input type="radio" name="radio" id="radio" value="radio">
+                        女 </p>
+
+                    <p>
+                        <label>学历：</label>
+                        <select name="select" id="select">
+                            <option value="1">大学/大专</option>
+                            <option value="2">高中/中专</option>
+                            <option>小学</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>文件域：</label>
+                        <input type="file" name="fileField" id="fileField">
+                    </p>
+
+                    <p>
+                        <label></label>
+                        <input name="" type="submit" class="kq-button blue" value="提交">
+                        <input name="重置" type="reset" class="kq-button" value="重置">
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="kq-wrapper">
+    <h1 class="phead">按钮
+        <small>
+            对按钮或者a标签按钮的样式重写,css3按钮是指通过css3来实现的按钮的效果，css3纯css可以实现立体，渐变，阴影，圆角等很多种特效，如果把这些属性通过各种不同的方式组合在一起就能实现很多不同的炫酷的按钮效果。
+        </small>
+    </h1>
+    <div class="kq-row">
+        <div class="kq-col12">
+            <table width="100%" border="0" class="kq-table kq-table-bordered">
+                <tr>
+                    <td>演示</td>
+                    <td>代码</td>
+                    <td>功能</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button">默认</a></td>
+                    <td><code>&lt;a class=&quot;kq-button&quot;&gt;</code> 或者 <code>&lt;input type=&quot;kq-button&quot;
+                        class=&quot;kq-button&quot;&gt;</code></td>
+                    <td>默认按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-black">黑色</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-black&quot;&gt;</code> 或者...</td>
+                    <td>黑色的按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-orange">橙色</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-orange&quot;&gt;</code> 或者...</td>
+                    <td>橙色按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-red">红色</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-red&quot;&gt;</code> 或者...</td>
+                    <td>红色按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-blue">蓝色</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-blue&quot;&gt;</code> 或者...</td>
+                    <td>蓝色按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-rosy">玫瑰红</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-rosy&quot;&gt;</code> 或者...</td>
+                    <td>玫瑰红按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-green">绿色</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-green&quot;&gt;</code> 或者...</td>
+                    <td>绿色按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-pink">粉红</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-pink&quot;&gt;</code> 或者...</td>
+                    <td>粉红按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-yellow">黄色</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-yellow&quot;&gt;</code> 或者...</td>
+                    <td>黄色按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-black kq-button-bigrounded">圆角</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-black kq-button-bigrounded&quot;&gt;</code> 或者...
+                    </td>
+                    <td>圆角的按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-black kq-button-medium">适中号</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-black kq-button-medium&quot;&gt;</code> 或者...</td>
+                    <td>中等号按钮</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="kq-button kq-button-black kq-button-small">小号</a></td>
+                    <td><code>&lt;a class=&quot;kq-button kq-button-black kq-button-small&quot;&gt;</code> 或者...</td>
+                    <td>小号按钮</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="kq-wrapper">
+    <h1 class="phead">页头
+        <small>一个网页的头部</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	   <pre>&lt;div class=&quot;kq-header&quot;&gt;<br>&lt;h1&gt;这是一个页头&lt;/h1&gt;<br>&lt;h2&gt;这是一个页面的描述&lt;br/&gt;
+&lt;small&gt;这是一个页面的具体描述&lt;/small&gt;
+&lt;/h2&gt;<br>&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+            <div class="kq-header">
+                <h1>这是一个页头</h1>
+
+                <h2>这是一个页面的描述<br/>
+                    <small>这是一个页面的具体描述</small>
+                </h2>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">头部告示
+        <small>黄色区域引人注目</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	   <pre>&lt;div class=&quot;kq-spring&quot;&gt;这是一段警告 
+&lt;del&gt;&amp;times;&lt;/del&gt;<br>&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+            <!--演示开始-->
+            <div class="kq-spring">
+                这是一段警告
+
+                <del>&times;</del>
+            </div>
+            <!--演示结束-->
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">头部导航
+        <small>头部导航</small>
+    </h1>
+
+    <div class="pbody">
+        <!--演示开始-->
+        <div class="kq-naver">
+            <div class="">
+                <div class="kq-naver-brand">
+                    <a href="./"><font class="danley">keqie</font> 渴切</a>
+                </div>
+                <div class="kq-naver-collapse">菜单</div>
+                <div class="kq-naver-module">
+                    <a href="index.html">概述</a>
+                    <a href="grid.html">框架</a>
+                    <a href="base.html">基础css</a>
+                    <a href="widget.html" class="selected">组件</a>
+                    <a href="javascript.html">javascript</a>
+                </div>
+                <form class="kq-naver-search">
+                    <input name="" type="text" value="" placeholder="请输入关键字" class="kq-text">
+                    <input name="" type="button" class="kq-button" value="搜索">
+                </form>
+                <div class="kq-naver-sub">
+                    <a href="http://mobile.keqie.com">移动版</a>
+                </div>
+            </div>
+        </div>
+        <!--演示结束-->
+
+        <h2>无色 添加<code>class="kq-naver kq-naver-unstyled"</code>调用</h2>
+        <!--演示开始-->
+        <div class="kq-naver kq-naver-unstyled">
+            <div class="">
+                <div class="kq-naver-brand">
+                    <a href="./"><font class="danley">keqie</font> 渴切</a>
+                </div>
+                <div class="kq-naver-collapse">菜单</div>
+                <div class="kq-naver-module">
+                    <a href="index.html">概述</a>
+                    <a href="grid.html">框架</a>
+                    <a href="base.html">基础css</a>
+                    <a href="widget.html" class="selected">组件</a>
+                    <a href="javascript.html">javascript</a>
+                </div>
+                <form class="kq-naver-search">
+                    <input name="" type="text" value="" placeholder="请输入关键字" class="kq-text">
+                    <input name="" type="button" class="kq-button" value="搜索">
+                </form>
+                <div class="kq-naver-sub">
+                    <a href="http://mobile.keqie.com">移动版</a>
+                </div>
+            </div>
+        </div>
+        <!--演示结束-->
+    </div>
+
+
+    <div class="phead">代码片段</div>
+    <pre>&lt;div class=&quot;kq-naver&quot;&gt;<br>	&lt;div class=&quot;kq-wrapper&quot;&gt;<br>    	&lt;div class=&quot;kq-naver-brand&quot;&gt;<br>        	&lt;a href=&quot;./&quot;&gt;&lt;font class=&quot;danley&quot;&gt;keqie&lt;/font&gt; 渴切&lt;/a&gt;<br>        &lt;/div&gt;<br>    	&lt;div class=&quot;kq-naver-module&quot;&gt;<br>&lt;ul&gt;<br>                &lt;li&gt;<br>                    &lt;strong&gt;&lt;a href=&quot;index.html&quot; class=&quot;selected&quot;&gt;菜单1&lt;/a&gt;&lt;/strong&gt;<br>                &lt;/li&gt;<br>                &lt;li&gt;<br>                    &lt;strong&gt;&lt;a href=&quot;###&quot;&gt;菜单2&lt;/a&gt;&lt;/strong&gt;<br>                    &lt;div class=&quot;kq-naver-droper&quot;&gt;<br>                        &lt;a href=&quot;#&quot;&gt;子菜单1&lt;/a&gt;<br>                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;子菜单2&lt;/a&gt;<br>                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;子菜单3&lt;/a&gt;<br>                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;子菜单4&lt;/a&gt;<br>                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;子菜单5&lt;/a&gt;<br>                    &lt;/div&gt;<br>                &lt;/li&gt;<br>                &lt;li&gt;<br>                    &lt;strong&gt;&lt;a href=&quot;###&quot;&gt;菜单3&lt;/a&gt;&lt;/strong&gt;<br>                    &lt;div class=&quot;kq-naver-droper&quot;&gt;<br>                        &lt;a href=&quot;#&quot;&gt;子菜单1&lt;/a&gt;<br>                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;子菜单2&lt;/a&gt;<br>                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;子菜单3&lt;/a&gt;<br>                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;子菜单4&lt;/a&gt;<br>                        &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;子菜单5&lt;/a&gt;<br>                    &lt;/div&gt;<br>                &lt;/li&gt;<br>            &lt;/ul&gt;<br>        &lt;/div&gt;<br>        &lt;div class=&quot;kq-naver-sub&quot;&gt;<br>        	&lt;a href=&quot;index.html&quot;&gt;例子&lt;/a&gt;<br>        	&lt;a href=&quot;http://mobile.keqie.com&quot;&gt;移动版&lt;/a&gt;<br>        &lt;/div&gt;<br>    &lt;/div&gt;<br>&lt;/div&gt;</pre>
+</div>
+
+<div class="kq-wrapper">
+    <h1 class="phead">选项卡
+        <small>带js的选项卡效果</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            基于jquery制作的选项卡效果，在前端制作的二次开发中经常用到，最简洁，最有效，最通用的代码及演示。
+        </div>
+        <div class="kq-col8">
+
+            <div class="phead">演示</div>
+
+
+            <!--选项卡开始-->
+            <div class="kq-taber">
+                <div class="kq-taber-head">
+                    <a href="#" lang="t1" class="selected">典故</a>
+                    <a href="#" lang="t2">关于</a>
+                    <a href="#" lang="t3">其他</a>
+                    <a href="#" lang="t4">其他</a>
+                </div>
+                <div class="kq-taber-body" id="t1">
+                    渴切犹急切。 何其芳《画梦录・炉边夜话》：“但这里的人从没有一个见过海的，辽远使我更加渴切了。这里的渴切是比渴望还要渴望的心情，渴切是一种需求，是一种梦想，是激励我们实现目标的动力。
+                </div>
+                <div class="kq-taber-body" id="t2" style="display:none;">
+                    渴切是一个开源中文 (X)HTML/CSS 框架 ,它的目的是减少你的css开发时间。它提供一个可靠的css基础去创建你的项目,能够用于网站的快速设计,通过重设和重建浏览器标准，可以让每个网站防
+                    止枯燥的跨浏览器兼容性测试。你可以将他理解成一套模板，里面包含了大多数站点中所需要的那些css类。他很小，只有四个文件而已。总共不到6KB。
+                </div>
+                <div class="kq-taber-body" id="t3" style="display:none;">
+                    更多相关资讯
+                </div>
+                <div class="kq-taber-body" id="t4" style="display:none;">
+                    更多相关资讯
+                </div>
+            </div>
+            <!--选项卡结束-->
+
+            <div class="phead">代码片段</div>
+            <pre>&lt;div class=&quot;kq-taber&quot;&gt;<br>           		&lt;div class=&quot;kq-taber-head&quot;&gt;<br>               	  &lt;a href=&quot;#&quot; lang=&quot;t1&quot; class=&quot;selected&quot;&gt;典故&lt;/a&gt;<br>               	  &lt;a href=&quot;#&quot; lang=&quot;t2&quot;&gt;关于&lt;/a&gt;<br>               	  &lt;a href=&quot;#&quot; lang=&quot;t3&quot;&gt;其他&lt;/a&gt;<br>               	  &lt;a href=&quot;#&quot; lang=&quot;t4&quot;&gt;其他&lt;/a&gt;<br>                &lt;/div&gt;<br>&lt;div class=&quot;kq-taber-body&quot; id=&quot;t1&quot;&gt;<br>                	渴切犹急切。 何其芳《画梦录・炉边夜话》：“但这里的人从没有一个见过海的，辽远使我更加渴切了。这里的渴切是比渴望还要渴望的心情，渴切是一种需求，是一种梦想，是激励我们实现目标的动力。<br>                &lt;/div&gt;<br>                &lt;div class=&quot;kq-taber-body&quot; id=&quot;t2&quot; style=&quot;display:none;&quot;&gt;<br>                	渴切是一个开源中文 (X)HTML/CSS 框架 ,它的目的是减少你的css开发时间。它提供一个可靠的css基础去创建你的项目,能够用于网站的快速设计,通过重设和重建浏览器标准，可以让每个网站防 止枯燥的跨浏览器兼容性测试。你可以将他理解成一套模板，里面包含了大多数站点中所需要的那些css类。他很小，只有四个文件而已。总共不到6KB。<br>        &lt;/div&gt;<br>                &lt;div class=&quot;kq-taber-body&quot; id=&quot;t3&quot; style=&quot;display:none;&quot;&gt;<br>                	更多相关资讯<br>        &lt;/div&gt;<br>                &lt;div class=&quot;kq-taber-body&quot; id=&quot;t4&quot; style=&quot;display:none;&quot;&gt;<br>                	更多相关资讯<br>        &lt;/div&gt;<br>           &lt;/div&gt;</pre>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">侧边栏
+        <small>侧边栏菜单，常用于子菜单的展示</small>
+    </h1>
+    <div class="kq-row">
+        <div class="kq-col4">
+            <pre>&lt;dl class=&quot;kq-sidebar&quot;&gt;<br>&lt;dd class=&quot;selected&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;栏目&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#&quot;&gt;菜单&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href=&quot;#&quot;&gt;菜单&lt;/a&gt;&lt;/dd&gt;<br>&lt;/dl&gt;
+            </pre>
+        </div>
+        <div class="kq-col8">
+            <dl class="kq-sidebar">
+                <dd class="selected"><a href="#">栏目</a></dd>
+                <dd><a href="#">菜单</a></dd>
+                <dd><a href="#">菜单</a></dd>
+            </dl>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">面包屑
+        <small>开源中文css框架</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	  <pre>&lt;div class=&quot;kq-current&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&amp;gt; 
+&lt;a href=&quot;#&quot;&gt;概述&lt;/a&gt;&amp;gt;
+&lt;span&gt;组件&lt;/span&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+            <div class="kq-current">
+                <a href="#">首页</a>
+                &gt; <a href="#">概述</a> &gt; 组件
+            </div>
+
+            <h2>无样式 引用<code>class="kq-current kq-current-unstyled"</code></h2>
+
+            <div class="kq-current-unstyled">
+                <a href="#">首页</a>
+                &gt; <a href="#">概述</a> &gt; 组件
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">分页
+        <small>通用而简洁的分页样式</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	  <pre>&lt;div class=&quot;kq-pager&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;上一页&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;99&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;下一页&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;尾页&lt;/a&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+            <div class="kq-pager">
+                <a href="#">首页</a>
+                <a href="#">上一页</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="selected">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">...</a>
+                <a href="#">99</a>
+                <a href="#">下一页</a>
+                <a href="#">尾页</a>
+            </div>
+
+            <h2>无样式分页 引用样式<code>class="kq-pager kq-pager-unstyled"</code></h2>
+
+            <div class="kq-pager kq-pager-unstyled">
+                <a href="#">首页</a>
+                <a href="#">上一页</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="selected">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">...</a>
+                <a href="#">99</a>
+                <a href="#">下一页</a>
+                <a href="#">尾页</a>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">tag标签
+        <small>以及其他注释用途</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col12">
+
+            <table width="100%" border="0" class="kq-table kq-table-bordered">
+                <tr>
+                    <td><span class="kq-label">默认</span></td>
+                    <td><code>&lt;span class=&quot;kq-label&quot;&gt;默认&lt;/span&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><span class="kq-label kq-label-success">成功</span></td>
+                    <td><code>&lt;span class=&quot;kq-label kq-label-success&quot;&gt;成功&lt;/span&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><span class="kq-label kq-label-warning">默认</span></td>
+                    <td><code>&lt;span class=&quot;kq-label kq-label-warning&quot;&gt;警告&lt;/span&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><span class="kq-label kq-label-error">默认</span></td>
+                    <td><code>&lt;span class=&quot;kq-label kq-label-error&quot;&gt;错误&lt;/span&gt;</code></td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">页尾
+        <small>一个网页的底部</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	  <pre>&lt;div class=&quot;kq-footer&quot;&gt;
+...
+&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+            <div class="kq-footer">Powered by <font class="danley"><a href="http://www.keqie.com">Keqie</a></font> V1.0
+
+                <br>
+                &copy; 2001-2012 <font class="danley"><a href="http://www.keqie.com">Keqie</a></font> Inc.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">heading
+        <small>跟页头有所区别，可以做头部BANNER来用</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	  <pre>&lt;div class=&quot;kq-heading&quot;&gt;
+&lt;h1&gt;这是一个heading&lt;/h1&gt;
+&lt;h2&gt;这是一个heading的描述&lt;/h2&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+            <div class="kq-heading">
+                <h1>这是一个heading</h1>
+
+                <h2>这是一个heading的描述</h2>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">提示信息
+        <small>不同的提示信息是不同的颜色，容易理解</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            <pre>&lt;div class=&quot;kq-alert&quot;&gt;<br>	&lt;strong&gt;提示信息！&lt;/strong&gt;<br>这是一段普通的提示信息描述&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+
+            <h2>默认提示风格</h2>
+
+            <div class="kq-alert">
+                <strong>提示信息！</strong>这是一段普通的提示信息描述
+            </div>
+
+            <h2>正确提示风格</h2>
+
+            <div class="kq-alert kq-alert-success">
+                <strong>恭喜你！</strong>经过你的不懈努力，你升级啦！
+            </div>
+
+            <h2>错误提示风格</h2>
+
+            <div class="kq-alert kq-alert-error">
+                <strong>权限不足！</strong>您没有权限访问本页，请问管理员索要权限。
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="kq-wrapper">
+    <h1 class="phead">进度条
+        <small>纯css实现</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	  <pre>&lt;div class=&quot;kq-progress&quot;&gt;<br>&lt;div class=&quot;kq-progress-bar&quot; style=&quot;width:50%;&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+
+            <h2>默认提示风格</h2>
+
+            <div class="kq-progress">
+                <div class="kq-progress-bar" style="width:50%;"></div>
+            </div>
+            <h2>格子状</h2>
+
+            <div class="kq-progress kq-progress-striped">
+                <div class="kq-progress-bar" style="width:50%;"></div>
+            </div>
+            <h2>动态滚动</h2>
+
+            <div class="kq-progress kq-progress-striped kq-progress-active">
+                <div class="kq-progress-bar" style="width:50%;"></div>
+            </div>
+            <h2>成功</h2>
+
+            <div class="kq-progress kq-progress-success">
+                <div class="kq-progress-bar" style="width:50%;"></div>
+            </div>
+            <h2>警告</h2>
+
+            <div class="kq-progress kq-progress-warning">
+                <div class="kq-progress-bar" style="width:50%;"></div>
+            </div>
+            <h2>危险</h2>
+
+            <div class="kq-progress kq-progress-danger">
+                <div class="kq-progress-bar" style="width:50%;"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">消息墙
+        <small>突出展示一些信息</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	  <pre>&lt;div class=&quot;kq-well&quot;&gt;<br>...
+&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+            <div class="kq-well">
+                消息墙，可以突出展示一些信息
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">masthead
+        <small>突出展示一些信息</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+    	  <pre>&lt;div class=&quot;kq-masthead&quot;&gt;<br>&lt;h1&gt;渴切&lt;/h1&gt;<br>&lt;div class=&quot;kq-lead&quot;&gt;国产响应式css框架&lt;/div&gt;<br>&lt;div class=&quot;kq-social&quot;&gt;兼容ie6，ie7，ie8，firefox，chrome等浏览器&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+            <div class="kq-masthead">
+                <h1>渴切</h1>
+
+                <div class="kq-lead">国产响应式css框架</div>
+                <div class="kq-social">兼容ie6，ie7，ie8，firefox，chrome等浏览器</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">时间轴
+        <small>时间线（timeline）是将一系列按照时间发生的事件拖放在一条直线上，来使用户直观的看出事件的先后关系。时间线一词还用来形容按照时间排列的年度报表或者其他文档。</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            <pre>&lt;ul class=&quot;kq-timeline&quot;&gt;<br>            	&lt;li class=&quot;kq-timeline-event&quot;&gt;<br>                	&lt;label&gt;&lt;/label&gt;<br>                	&lt;div class=&quot;kq-timeline-thumb&quot; style=&quot;background-image:url(imgs/darthvader.jpg);&quot;&gt;<br>                    	&lt;span&gt;19 Nov&lt;/span&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;kq-timeline-inner&quot;&gt;<br>                    	&lt;h3&gt; ... &lt;/h3&gt;<br>                        &lt;p&gt; ... &lt;/p&gt;<br>                    &lt;/div&gt;<br>                &lt;/li&gt;<br>            	&lt;li class=&quot;kq-timeline-event&quot;&gt;<br>                	&lt;label&gt;&lt;/label&gt;<br>                	&lt;div class=&quot;kq-timeline-thumb&quot; style=&quot;background-image:url(imgs/darthvader.jpg);&quot;&gt;<br>                    	&lt;span&gt;19 Nov&lt;/span&gt;<br>                    &lt;/div&gt;<br>                    &lt;div class=&quot;kq-timeline-inner&quot;&gt;<br>                    	&lt;h3&gt;...&lt;/h3&gt;<br>                        &lt;p&gt;...&lt;/p&gt;<br>                    &lt;/div&gt;<br>                &lt;/li&gt;<br>            &lt;/ul&gt;</pre>
+        </div>
+        <div class="kq-col8">
+            <ul class="kq-timeline">
+                <li class="kq-timeline-event">
+                    <label></label>
+
+                    <div class="kq-timeline-thumb" style="background-image:url(imgs/darthvader.jpg);">
+                        <span>19 Nov</span>
+                    </div>
+                    <div class="kq-timeline-inner">
+                        <h3>渴切取自“Cutter”的谐音</h3>
+
+                        <p>它是一个基于html5/css3的开源中文响应式框架 ,它的目的是减少你的css开发时间.</p>
+                    </div>
+                </li>
+                <li class="kq-timeline-event">
+                    <label></label>
+
+                    <div class="kq-timeline-thumb" style="background-image:url(imgs/darthvader.jpg);">
+                        <span>19 Nov</span>
+                    </div>
+                    <div class="kq-timeline-inner">
+                        <h3>渴切取自“Cutter”的谐音</h3>
+
+                        <p>它是一个基于html5/css3的开源中文响应式框架 ,它的目的是减少你的css开发时间.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="kq-wrapper">
+    <h1 class="phead">popup
+        <small>弹窗 通过<code>rel="kq-popup"</code>来调用</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            <pre>&lt;div class=&quot;kq-popup&quot; style=&quot;display:block;&quot;&gt;<br>   	&lt;div class=&quot;kq-popup-head&quot;&gt;<br>    	编辑学校<br>        &lt;del&gt;×&lt;/del&gt;<br>    &lt;/div&gt;<br>    &lt;div class=&quot;kq-popup-body&quot;&gt;<br>    ...<br>    &lt;/div&gt;<br>    &lt;div class=&quot;kq-popup-foot&quot;&gt;<br>    	&lt;input name=&quot;&quot; type=&quot;kq-button&quot; value=&quot;确定&quot; class=&quot;kq-button kq-button-blue&quot;&gt;<br>    	&lt;input name=&quot;&quot; type=&quot;kq-button&quot; value=&quot;取消&quot; class=&quot;kq-button&quot;&gt;<br>    &lt;/div&gt;<br>   &lt;/div&gt;</pre>
+        </div>
+        <div class="kq-col8">
+
+            <div class="kq-well" style=" background:#888;">
+                <!--演示开始-->
+                <div class="kq-popup" style="display:block; position:relative; top:auto; left:auto; margin:0 auto;">
+                    <div class="kq-popup-head">
+                        编辑学校
+                        <del>×</del>
+                    </div>
+                    <div class="kq-popup-body">
+                        <p>
+                            名称：<input name="" type="text">
+                        </p>
+
+                        <p>
+                            省份：<select name=""></select> 地区：<select name=""></select>
+                        </p>
+
+                        <p>
+                            地址：<input name="" type="text">
+                        </p>
+
+                        <p>
+                            级别：<select name=""></select> <input name="" type="text">
+                        </p>
+
+                        <p>
+                            类型：<input name="" type="radio" value="">高中 <input name="" type="radio" value="">初中 <input
+                                name="" type="radio" value="">小学
+                        </p>
+                    </div>
+                    <div class="kq-popup-foot">
+                        <input name="" type="button" value="确定" class="kq-button kq-button-blue">
+                        <input name="" type="button" value="取消" class="kq-button">
+                    </div>
+                </div>
+                <!--演示结束-->
+            </div>
+
+
+            <h2>事件调用</h2>
+
+            <p>
+                <a href="#kq-popup" class="kq-button" rel="kq-popup">点击我弹出POPUP窗口</a>
+            </p>
+            <pre>&lt;a href=&quot;#kq-popup&quot; class=&quot;kq-button&quot; rel=&quot;kq-popup&quot;&gt;点击我弹出POPUP窗口&lt;/a&gt;</pre>
+
+            <!--调用演示-->
+            <div class="kq-popup" id="kq-popup">
+                <div class="kq-popup-head">
+                    编辑学校
+                    <del>×</del>
+                </div>
+                <div class="kq-popup-body">
+
+                    <p>
+                        这里是内容
+                    </p>
+                </div>
+                <div class="kq-popup-foot">
+                    <input name="" type="button" value="确定" class="kq-button kq-button-blue">
+                    <input name="" type="button" value="取消" class="kq-button">
+                </div>
+            </div>
+            <!--调用演示结束-->
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">tooltip
+        <small>气泡提醒组件 通过<code>rel="tooltip"</code>来调用</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+
+            <div class="phead">代码片段</div>
+            <pre>&lt;a rel=&quot;kq-tooltip&quot; title=&quot;渴切是一个开源中文(X)HTML/CSS 框架&quot;&gt;渴切&lt;/a&gt;</pre>
+        </div>
+        <div class="kq-col8">
+            <h1 class="phead">演示</h1>
+
+            <div class="kq-well" style="kq-color:#ccc;">
+                <a rel="kq-tooltip" title="渴切是一个开源中文(X)HTML/CSS 框架">渴切</a>是一个开源中文 (X)HTML/CSS 框架
+                ,它的目的是减少你的css开发时间。它提供一个可靠的css基础去创建你的项目,能够用于网站的快速设计,通过重设和重建浏览器标准，可以让每个网站防 止枯燥的跨浏览器兼容性测试。
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">popover
+        <small>气泡提醒组件 通过<code>rel="kq-popover"</code>来调用</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+
+            <div class="phead">代码片段</div>
+            <pre>&lt;a rel=&quot;kq-popover&quot; title=&quot;渴切是一个开源中文(X)HTML/CSS 框架&quot;&gt;渴切&lt;/a&gt;</pre>
+        </div>
+        <div class="kq-col8">
+            <h1 class="phead">演示</h1>
+
+            <div class="kq-well" style="kq-color:#ccc;">
+                <a rel="kq-popover" title="渴切是一个开源中文(X)HTML/CSS 框架">渴切</a>是一个开源中文 (X)HTML/CSS 框架
+                ,它的目的是减少你的css开发时间。它提供一个可靠的css基础去创建你的项目,能够用于网站的快速设计,通过重设和重建浏览器标准，可以让每个网站防 止枯燥的跨浏览器兼容性测试。
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<!--滚动区域-->
+<div class="kq-wrapper">
+    <div class="kq-slider">
+
+
+        <div class="kq-slider-item">
+            <h1>比Bootstrap更懂ie6</h1>
+
+            <h2>全面支持ie6浏览器，bootstrap做不到的我们做到了！</h2>
+        </div>
+        <div class="kq-slider-item">
+            <h1>响应式css框架，国内首款</h1>
+
+            <h2>渴切取自“Cutter”的谐音。翻译成中文是切割者的意思！</h2>
+        </div>
+        <div class="kq-slider-item">
+            <h1>支持国货不仅仅是口号</h1>
+
+            <h2>it's Made In China！如果你觉得好用就义无反顾的支持吧！</h2>
+        </div>
+
+        <!--左右按钮-->
+        <div class="kq-slider-prev">&lsaquo;</div>
+        <div class="kq-slider-next">&rsaquo;</div>
+
+    </div>
+
+    <div class="phead">代码片段</div>
+    <pre>&lt;div class=&quot;kq-slider&quot;&gt;<br>            <br>            <br>        	&lt;div class=&quot;kq-slider-item&quot;&gt;<br>                    &lt;h1&gt;比Bootstrap更懂ie6&lt;/h1&gt;<br>                &lt;h2&gt;全面支持ie6浏览器，bootstrap做不到的我们做到了！&lt;/h2&gt;<br>            &lt;/div&gt;<br>            &lt;div class=&quot;kq-slider-item&quot;&gt;<br>            	&lt;h1&gt;响应式css框架，国内首款&lt;/h1&gt;<br>                &lt;h2&gt;渴切取自“Cutter”的谐音。翻译成中文是切割者的意思！&lt;/h2&gt;<br>            &lt;/div&gt;<br>        	&lt;div class=&quot;kq-slider-item&quot;&gt;<br>                   &lt;h1&gt;支持国货不仅仅是口号&lt;/h1&gt;<br>    				&lt;h2&gt;it's Made In China！如果你觉得好用就义无反顾的支持吧！&lt;/h2&gt;<br>            &lt;/div&gt;<br>            <br>            &lt;!--左右按钮--&gt;<br>    &lt;div class=&quot;kq-slider-prev&quot;&gt;&amp;lsaquo;&lt;/div&gt;<br>    &lt;div class=&quot;kq-slider-next&quot;&gt;&amp;rsaquo;&lt;/div&gt;<br>            <br>    &lt;/div&gt;</pre>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">设为首页
+        <small>一个兼容所有浏览器的设为首页js代码</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            一个常用的js功能，但是兼容的比较少，这里整理出兼容所有浏览器的设为首页js代码。
+        </div>
+        <div class="kq-col8">
+            <h1 class="phead">演示</h1>
+
+            <p><a href="javascript:SetHome();" class="kq-button kq-button-blue">设为首页</a></p>
+            <pre>&lt;a href=&quot;javascript:SetHome();&quot; class=&quot;kq-button kq-button-blue&quot;&gt;设为首页&lt;/a&gt;</pre>
+            <div class="phead">代码片段</div>
+            <pre>function SetHome(obj,vrl){<br>	try{ obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl); }<br>	catch(e){<br>		if(window.netscape) {<br>			try { netscape.security.PrivilegeManager.enablePrivilege(&quot;UniversalXPConnect&quot;);  }  <br>			catch (e) { <br>				alert(&quot;此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将[signed.applets.codebase_principal_support]设置为'true'&quot;);<br>			}<br>		var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);<br>		prefs.setCharPref('browser.startup.homepage',vrl);<br>		}<br>	}<br>}</pre>
+        </div>
+
+    </div>
+</div>
+
+<div class="kq-wrapper">
+    <h1 class="phead">加入收藏
+        <small>一个兼容所有浏览器的加入收藏js代码</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            一个常用的js功能，但是兼容的比较少，这里整理出兼容所有浏览器的加入收藏js代码。
+        </div>
+        <div class="kq-col8">
+            <h1 class="phead">演示</h1>
+
+            <p><a href="javascript:AddFavorite('http://download.keqie.com','渴切-开源中文css框架');"
+                  class="kq-button blue">加入收藏</a></p>
+            <pre>&lt;a href=&quot;javascript:AddFavorite('http://download.keqie.com','渴切-开源中文css框架');&quot;&gt;
+加入收藏&lt;/a&gt;</pre>
+            <div class="phead">代码片段</div>
+            <pre>function AddFavorite(sURL, sTitle)<br>{<br>    try { window.external.addFavorite(sURL, sTitle); }<br>    catch (e)<br>    {<br>        try { window.sidebar.addPanel(sTitle, sURL, &quot;&quot;); }<br>        catch (e) {<br>            alert(&quot;加入收藏失败，请使用Ctrl+D进行添加&quot;);<br>        }<br>    }<br>}</pre>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#timer').click(function () {
+            setTimeout(function () {
+                alert(1);
+            }, 3000);
+        })
+    })
+</script>
+<div class="kq-wrapper">
+    <h1 class="phead">延时效果
+        <small>展示一个js延时效果的实现方法</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            一个常用的js功能，但是兼容的比较少，这里整理出兼容所有浏览器的s代码。 延时效果一般通过setTimeout函数可以简单实现。
+        </div>
+        <div class="kq-col8">
+            <h1 class="phead">演示</h1>
+
+            <p><a class="kq-button blue" id="timer">点击我，延时3秒钟弹出窗口</a></p>
+
+            <div class="phead">代码片段</div>
+            <pre>&lt;script type=&quot;text/javascript&quot;&gt;<br>	setTimeout(function(){<br>		alert(1);<br>	},3000);<br>&lt;/script&gt;</pre>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#masker').click(function () {
+            $('body').prepend('<div id="mask"></div>').find('#mask').css({opacity: 0.2, cursor: 'pointer', background: 'black', position: 'absolute', zIndex: 999, width: '100%', height: $(document).height()});
+
+            /*点击遮罩关闭*/
+            $('#mask').live('click', function () {
+                $(this).remove();
+            })
+        })
+    })
+</script>
+<div class="kq-wrapper">
+    <h1 class="phead">弹出一个满屏的遮罩层
+        <small>兼容ie6，ie7，ie8，firefox，chrome</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            兼容，一段代码搞掂。
+        </div>
+        <div class="kq-col8">
+
+            <div class="phead">演示
+                <small>推荐，一句话jquery链式写法</small>
+            </div>
+            <p><a class="kq-button blue" id="masker">点击我</a></p>
+
+            <div class="phead">代码片段</div>
+        <pre>$('body').prepend('&lt;div id=&quot;mask&quot;&gt;&lt;/div&gt;').find('#mask').css({opacity:0.2, 
+cursor:'pointer', background:'black', position:'absolute', zIndex:999, width:'100%', 
+height:$(document).height()});
+
+/*点击遮罩关闭,live方法用于，为通过js新增的元素添加事件*/<br>$('#mask').live('click',function(){<br>	$(this).remove();<br>})</pre>
+        </div>
+
+    </div>
+</div>
+
+<div class="kq-wrapper">
+    <h1 class="phead">单行滚动
+        <small>总结出非常常用的单行滚动效果，史上最简单的jQuery实现！代码更小。结构布局更简单。使用更方便。</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+
+            <!--演示开始-->
+            <div class="kq-singlerolling" style="height:88px;">
+                <ul>
+                    <li>这是第一行</li>
+                    <li>这是第一行2</li>
+                    <li>这是第一行2</li>
+                    <li>这是第一行2</li>
+                    <li>这是第一行2</li>
+                    <li>这是第一行2</li>
+                </ul>
+            </div>
+            <!--演示结束-->
+
+        </div>
+        <div class="kq-col8">
+            <h1 class="phead">演示</h1>
+
+            <!--演示开始-->
+            <div class="kq-singlerolling">
+                <ul>
+                    <li>这是第一行</li>
+                    <li>这是第一行2</li>
+                </ul>
+            </div>
+            <!--演示结束-->
+
+            <div class="phead">代码片段</div>
+            <pre>&lt;div class=&quot;kq-singlerolling&quot;&gt;<br>            	&lt;ul&gt;<br>                	&lt;li&gt;这是第一行&lt;/li&gt;<br>                	&lt;li&gt;这是第一行2&lt;/li&gt;<br>                &lt;/ul&gt;<br>            &lt;/div&gt;</pre>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">敬请期待
+        <small>敬请期待</small>
+    </h1>
+
+    <div class="kq-row">
+        <div class="kq-col4">
+            敬请期待
+        </div>
+        <div class="kq-col8">
+            <h1 class="phead">演示</h1>
+
+            <p>敬请期待</p>
+
+            <div class="phead">代码片段</div>
+            <pre>敬请期待</pre>
+        </div>
+
+    </div>
+</div>
+
+<style type="text/css">
+    .icons {
+    }
+
+    .icons .icon {
+        float: none;
+        display: block;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .icons p {
+        border: 1px solid #DDDDDD;
+        font-size: 12px;
+        height: 60px;
+        line-height: 1.4;
+        margin: 0 0 20px 0;
+        padding: 10px;
+        text-align: center;
+        display: block;
+    }
+</style>
+<div class="kq-wrapper icons">
+<h1 class="phead">图标
+    <small>图标基于css3 @font-face自定义字体，通过加载glyphicon图标字体来完成各种图标实现。图标icon的种类之多基本可以满足所有的网站需要。</small>
+</h1>
+<div class="kq-row">
+<div class="kq-col1"><p><i class="kq-icon kq-icon-adjust"></i>.kq-icon .kq-icon-adjust</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-align-center"></i>.kq-icon .kq-icon-align-center</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-align-justify"></i>.kq-icon .kq-icon-align-justify</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-align-left"></i>.kq-icon .kq-icon-align-left</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-align-right"></i>.kq-icon .kq-icon-align-right</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-arrow-down"></i>.kq-icon .kq-icon-arrow-down</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-arrow-left"></i>.kq-icon .kq-icon-arrow-left</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-arrow-right"></i>.kq-icon .kq-icon-arrow-right</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-arrow-up"></i>.kq-icon .kq-icon-arrow-up</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-asterisk"></i>.kq-icon .kq-icon-asterisk</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-backward"></i>.kq-icon .kq-icon-backward</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-ban-circle"></i>.kq-icon .kq-icon-ban-circle</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-barcode"></i>.kq-icon .kq-icon-barcode</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-bell"></i>.kq-icon .kq-icon-bell</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-bold"></i>.kq-icon .kq-icon-bold</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-book"></i>.kq-icon .kq-icon-book</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-bookmark"></i>.kq-icon .kq-icon-bookmark</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-briefcase"></i>.kq-icon .kq-icon-briefcase</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-bullhorn"></i>.kq-icon .kq-icon-bullhorn</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-calendar"></i>.kq-icon .kq-icon-calendar</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-camera"></i>.kq-icon .kq-icon-camera</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-certificate"></i>.kq-icon .kq-icon-certificate</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-check"></i>.kq-icon .kq-icon-check</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-chevron-down"></i>.kq-icon .kq-icon-chevron-down</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-chevron-left"></i>.kq-icon .kq-icon-chevron-left</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-chevron-right"></i>.kq-icon .kq-icon-chevron-right</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-chevron-up"></i>.kq-icon .kq-icon-chevron-upe</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-circle-arrow-down"></i>.kq-icon .kq-icon-circle-arrow-down</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-circle-arrow-left"></i>.kq-icon .kq-icon-circle-arrow-left</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-circle-arrow-right"></i>.kq-icon .kq-icon-circle-arrow-right</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-circle-arrow-up"></i>.kq-icon .kq-icon-circle-arrow-up</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-cloud"></i>.kq-icon .kq-icon-cloud</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-cloud-download"></i>.kq-icon .kq-icon-cloud-download</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-cloud-upload"></i>.kq-icon .kq-icon-cloud-upload</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-cog"></i>.kq-icon .kq-icon-cog</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-collapse-down"></i>.kq-icon .kq-icon-collapse-down</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-collapse-up"></i>.kq-icon .kq-icon-collapse-up</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-comment"></i>.kq-icon .kq-icon-comment</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-compressed"></i>.kq-icon .kq-icon-compressed</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-copyright-mark"></i>.kq-icon .kq-icon-copyright-mark</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-credit-card"></i>.kq-icon .kq-icon-credit-card</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-cutlery"></i>.kq-icon .kq-icon-cutlery</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-dashboard"></i>.kq-icon .kq-icon-dashboard</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-download"></i>.kq-icon .kq-icon-download</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-download-alt"></i>.kq-icon .kq-icon-download-alt</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-earphone"></i>.kq-icon .kq-icon-earphone</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-edit"></i>.kq-icon .kq-icon-edit</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-eject"></i>.kq-icon .kq-icon-eject</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-envelope"></i>.kq-icon .kq-icon-envelope</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-euro"></i>.kq-icon .kq-icon-euro</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-exclamation-sign"></i>.kq-icon .kq-icon-exclamation-sign</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-expand"></i>.kq-icon .kq-icon-expand</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-export"></i>.kq-icon .kq-icon-export</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-eye-close"></i>.kq-icon .kq-icon-eye-close</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-eye-open"></i>.kq-icon .kq-icon-eye-open</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-facetime-video"></i>.kq-icon .kq-icon-facetime-video</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-fast-backward"></i>.kq-icon .kq-icon-fast-backward</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-fast-forward"></i>.kq-icon .kq-icon-fast-forward</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-file"></i>.kq-icon .kq-icon-file</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-film"></i>.kq-icon .kq-icon-film</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-filter"></i>.kq-icon .kq-icon-filter</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-fire"></i>.kq-icon .kq-icon-fire</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-flag"></i>.kq-icon .kq-icon-flag</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-flash"></i>.kq-icon .kq-icon-flash</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-floppy-disk"></i>.kq-icon .kq-icon-floppy-disk</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-floppy-open"></i>.kq-icon .kq-icon-floppy-open</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-floppy-remove"></i>.kq-icon .kq-icon-floppy-remove</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-floppy-save"></i>.kq-icon .kq-icon-floppy-save</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-floppy-saved"></i>.kq-icon .kq-icon-floppy-saved</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-folder-close"></i>.kq-icon .kq-icon-folder-close</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-folder-open"></i>.kq-icon .kq-icon-folder-open</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-font"></i>.kq-icon .kq-icon-font</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-forward"></i>.kq-icon .kq-icon-forward</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-fullscreen"></i>.kq-icon .kq-icon-fullscreen</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-gbp"></i>.kq-icon .kq-icon-gbp</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-gift"></i>.kq-icon .kq-icon-gift</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-glass"></i>.kq-icon .kq-icon-glass</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-globe"></i>.kq-icon .kq-icon-globe</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-hand-down"></i>.kq-icon .kq-icon-hand-down</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-hand-left"></i>.kq-icon .kq-icon-hand-left</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-hand-right"></i>.kq-icon .kq-icon-hand-right</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-hand-up"></i>.kq-icon .kq-icon-hand-up</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-hd-video"></i>.kq-icon .kq-icon-hd-video</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-hdd"></i>.kq-icon .kq-icon-hdd</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-header"></i>.kq-icon .kq-icon-header</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-headphones"></i>.kq-icon .kq-icon-headphones</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-heart"></i>.kq-icon .kq-icon-heart</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-heart-empty"></i>.kq-icon .kq-icon-heart-empty</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-home"></i>.kq-icon .kq-icon-home</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-import"></i>.kq-icon .kq-icon-import</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-inbox"></i>.kq-icon .kq-icon-inbox</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-indent-left"></i>.kq-icon .kq-icon-indent-left</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-indent-right"></i>.kq-icon .kq-icon-indent-right</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-info-sign"></i>.kq-icon .kq-icon-info-sign</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-italic"></i>.kq-icon .kq-icon-italic</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-leaf"></i>.kq-icon .kq-icon-leaf</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-link"></i>.kq-icon .kq-icon-link</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-list"></i>.kq-icon .kq-icon-list</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-list-alt"></i>.kq-icon .kq-icon-list-alt</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-lock"></i>.kq-icon .kq-icon-lock</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-log-in"></i>.kq-icon .kq-icon-log-in</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-log-out"></i>.kq-icon .kq-icon-log-out</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-magnet"></i>.kq-icon .kq-icon-magnet</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-map-marker"></i>.kq-icon .kq-icon-map-marker</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-minus"></i>.kq-icon .kq-icon-minus</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-minus-sign"></i>.kq-icon .kq-icon-minus-sign</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-move"></i>.kq-icon .kq-icon-move</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-music"></i>.kq-icon .kq-icon-music</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-new-window"></i>.kq-icon .kq-icon-new-window</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-off"></i>.kq-icon .kq-icon-off</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-ok"></i>.kq-icon .kq-icon-ok</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-ok-circle"></i>.kq-icon .kq-icon-ok-circle</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-ok-sign"></i>.kq-icon .kq-icon-ok-sign</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-open"></i>.kq-icon .kq-icon-open</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-paperclip"></i>.kq-icon .kq-icon-paperclip</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-pause"></i>.kq-icon .kq-icon-pause</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-pencil"></i>.kq-icon .kq-icon-pencil</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-phone"></i>.kq-icon .kq-icon-phone</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-phone-alt"></i>.kq-icon .kq-icon-phone-alt</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-picture"></i>.kq-icon .kq-icon-picture</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-plane"></i>.kq-icon .kq-icon-plane</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-play"></i>.kq-icon .kq-icon-play</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-play-circle"></i>.kq-icon .kq-icon-play-circle</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-plus"></i>.kq-icon .kq-icon-plus</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-plus-sign"></i>.kq-icon .kq-icon-plus-sign</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-print"></i>.kq-icon .kq-icon-print</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-pushpin"></i>.kq-icon .kq-icon-pushpin</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-qrcode"></i>.kq-icon .kq-icon-qrcode</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-question-sign"></i>.kq-icon .kq-icon-question-sign</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-random"></i>.kq-icon .kq-icon-random</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-record"></i>.kq-icon .kq-icon-record</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-refresh"></i>.kq-icon .kq-icon-refresh</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-registration-mark"></i>.kq-icon .kq-icon-registration-mark</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-remove"></i>.kq-icon .kq-icon-remove</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-remove-circle"></i>.kq-icon .kq-icon-remove-circle</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-remove-sign"></i>.kq-icon .kq-icon-remove-sign</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-repeat"></i>.kq-icon .kq-icon-repeat</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-resize-full"></i>.kq-icon .kq-icon-resize-full</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-resize-horizontal"></i>.kq-icon .kq-icon-resize-horizontal</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-resize-small"></i>.kq-icon .kq-icon-resize-small</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-resize-vertical"></i>.kq-icon .kq-icon-resize-vertical</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-retweet"></i>.kq-icon .kq-icon-retweet</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-road"></i>.kq-icon .kq-icon-road</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-save"></i>.kq-icon .kq-icon-save</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-saved"></i>.kq-icon .kq-icon-saved</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-screenshot"></i>.kq-icon .kq-icon-screenshot</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sd-video"></i>.kq-icon .kq-icon-sd-video</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-search"></i>.kq-icon .kq-icon-search</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-send"></i>.kq-icon .kq-icon-send</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-share"></i>.kq-icon .kq-icon-share</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-share-alt"></i>.kq-icon .kq-icon-share-alt</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-shopping-cart"></i>.kq-icon .kq-icon-shopping-cart</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-signal"></i>.kq-icon .kq-icon-signal</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sort"></i>.kq-icon .kq-icon-sort</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sort-by-alphabet"></i>.kq-icon .kq-icon-sort-by-alphabet</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sort-by-alphabet-alt"></i>.kq-icon .kq-icon-sort-by-alphabet-alt</p>
+</div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sort-by-attributes"></i>.kq-icon .kq-icon-sort-by-attributes</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sort-by-attributes-alt"></i>.kq-icon .kq-icon-sort-by-attributes-alt
+</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sort-by-order"></i>.kq-icon .kq-icon-sort-by-order</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sort-by-order-alt"></i>.kq-icon .kq-icon-sort-by-order-alt</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sound-5-1"></i>.kq-icon .kq-icon-sound-5-1</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sound-6-1"></i>.kq-icon .kq-icon-sound-6-1</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sound-7-1"></i>.kq-icon .kq-icon-sound-7-1</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sound-dolby"></i>.kq-icon .kq-icon-sound-dolby</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-sound-stereo"></i>.kq-icon .kq-icon-sound-stereo</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-star"></i>.kq-icon .kq-icon-star</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-star-empty"></i>.kq-icon .kq-icon-star-empty</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-stats"></i>.kq-icon .kq-icon-stats</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-step-backward"></i>.kq-icon .kq-icon-step-backward</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-step-forward"></i>.kq-icon .kq-icon-step-forward</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-stop"></i>.kq-icon .kq-icon-stop</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-subtitles"></i>.kq-icon .kq-icon-subtitles</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-tag"></i>.kq-icon .kq-icon-tag</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-tags"></i>.kq-icon .kq-icon-tags</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-tasks"></i>.kq-icon .kq-icon-tasks</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-text-height"></i>.kq-icon .kq-icon-text-height</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-text-width"></i>.kq-icon .kq-icon-text-width</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-th"></i>.kq-icon .kq-icon-th</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-th-large"></i>.kq-icon .kq-icon-th-large</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-th-list"></i>.kq-icon .kq-icon-th-list</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-thumbs-down"></i>.kq-icon .kq-icon-thumbs-down</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-thumbs-up"></i>.kq-icon .kq-icon-thumbs-up</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-time"></i>.kq-icon .kq-icon-time</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-tint"></i>.kq-icon .kq-icon-tint</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-tower"></i>.kq-icon .kq-icon-tower</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-transfer"></i>.kq-icon .kq-icon-transfer</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-trash"></i>.kq-icon .kq-icon-trash</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-tree-conifer"></i>.kq-icon .kq-icon-tree-conifer</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-tree-deciduous"></i>.kq-icon .kq-icon-tree-deciduous</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-unchecked"></i>.kq-icon .kq-icon-unchecked</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-upload"></i>.kq-icon .kq-icon-upload</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-usd"></i>.kq-icon .kq-icon-usd</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-user"></i>.kq-icon .kq-icon-user</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-volume-down"></i>.kq-icon .kq-icon-volume-down</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-volume-off"></i>.kq-icon .kq-icon-volume-off</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-volume-up"></i>.kq-icon .kq-icon-volume-up</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-warning-sign"></i>.kq-icon .kq-icon-warning-sign</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-wrench"></i>.kq-icon .kq-icon-wrench</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-zoom-in"></i>.kq-icon .kq-icon-zoom-in</p></div>
+<div class="kq-col1"><p><i class="kq-icon kq-icon-zoom-out"></i>.kq-icon .kq-icon-zoom-out</p></div>
+</div>
+</div>
+
+
+<div class="kq-wrapper">
+    <h1 class="phead">footbar
+        <small></small>
+    </h1>
+
+
+    <div class="kq-footbar">
+        <div class="kq-footbar-head">
+            <div class="kq-wrapper">
+                <form action="" method="get" style="display:inline;">
+                    <input name="" type="text" style="width:300px;" placeholder="请输入网址进行查询" class="kq-text">
+                    <input name="" type="button" class="kq-button kq-button-blue" value="搜索">
+                </form>
+                &nbsp;<a href="#">排行榜</a> <a href="#">css框架</a> <a href="#">开源css框架</a> <a href="#">中文css框架</a>
+            </div>
+        </div>
+
+        <div class="kq-footbar-body">
+            <div class="kq-wrapper">
+                <div class="kq-row">
+                    <div class="kq-col3">
+                        <h2>更多站点</h2>
+                        <ul class="unstyled">
+                            <li><i class="icon imac"></i><a href="http://download.keqie.com">渴切-开源中文css框架</a></li>
+                            <li class="clear"><i class="icon macbook"></i><a href="http://mobile.keqie.com">渴切手机版</a>
+                            </li>
+                            <li class="clear"><i class="icon iphone"></i><a href="http://android.keqie.com">渴切安卓版</a>
+                            </li>
+                            <li class="clear"><i class="icon cardio"></i><a href="http://index.keqie.com">渴切指数</a></li>
+                        </ul>
+                    </div>
+                    <div class="kq-col3">
+                        <h2>了解我们</h2>
+                        <ul class="unstyled">
+                            <li><a href="#">关于渴切</a></li>
+                            <li><a href="#">渴切前端团队</a></li>
+                            <li><a href="#">渴切文化</a></li>
+                            <li><a href="#">渴切办公环境</a></li>
+                            <li><a href="#">成长历程</a></li>
+                            <li><a href="#">渴切前端观点</a></li>
+                        </ul>
+                    </div>
+                    <div class="kq-col3">
+                        <h2>服务介绍</h2>
+                        <ul class="unstyled">
+                            <li><a href="#">渴切的服务领域</a></li>
+                            <li><a href="#">服务优势</a></li>
+                            <li><a href="#">客户列表</a></li>
+                            <li><a href="#">在线服务前端咨询</a></li>
+                        </ul>
+                    </div>
+                    <div class="kq-col3">
+                        <h2>联系渴切</h2>
+                        <ul class="unstyled">
+                            <li><a href="#">联系方式</a></li>
+                            <li><a href="#">渴切网站地图</a></li>
+                            <li><a href="#">法律条款</a></li>
+                            <li><a href="#">友情链接</a></li>
+                            <li><a href="#">网站管理</a></li>
+                            <li><a href="#">站长统计</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="kq-wrapper kq-footer">
+    <p>&copy; CopyRight 2002-2013, 渴切 keqie.com, Inc.All Rights Reserved.<br/>
+        代码基于<a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow" target="_blank">Apache License v2.0</a>,
+        文档基于创作共享的 <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="nofollow" target="_blank">署名-非商业使用-相同方
+            式分享 2.5</a> 协议发布</p>
+</div>
+</body>
+</html>

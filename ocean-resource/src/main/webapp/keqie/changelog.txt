@@ -1,0 +1,19 @@
+
+1,淘汰了以往图片图标的调用，采用了最新的字体图标文件来制作网页图标，图标可以调整大小，可调整颜色。
+
+
+
+
+v3.3
+
+PS: 长期web项目开发中偶然发现 “宋体” 在 11px, 17px, 19px, 21px ,23px, 25px 会产生一点点的毛边。多了点黑体的柔滑。于是。。。
+
+v3.3版本中默认采用17px大号宋体。以及19px，21px。。
+
+里程碑意义的修改：由之前的调用方式 class="table bordered" 改为了 class="kq-table kq-table-bordered" 方式。好处是当你再dreamweaver中敲入 class="kq 的时候，即会弹出渴切定义的所有样式。
+
+把原来 base.html , grid.html, icon.html ,javascript.html， widget.html 合为一个页面。
+
+更多的细节调整，颜色调整。
+
+锁定渴切官网：http://www.keqie.com

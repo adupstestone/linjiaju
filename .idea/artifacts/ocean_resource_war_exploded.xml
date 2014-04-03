@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ocean-resource:war exploded">
+    <output-path>$PROJECT_DIR$/ocean-resource/target/ocean-resource</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ocean-resource/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ocean-resource" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 可复用sql -->
+<mapper namespace="com.linjiaju.ocean.test.dao.BaseDao">
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+    <!-- 分页统计记录头 -->
+    <sql id="queryCountHead">
+		select count(*) total from (
+	</sql>
+
+    <!-- 分页统计记录尾 -->
+    <sql id="queryCountEnd">
+		)
+	</sql>
+
+    <!-- 分页查询头 -->
+    <sql id="queryByPageHead">
+		select * from (
+		select a.*,rownum rn from (
+	</sql>
+
+    <!-- 分页查询尾 -->
+    <sql id="queryByPageEnd">
+		) a where rownum &lt;= #{endNum}
+		) b
+		where b.rn &gt;= #{startNum}
+	</sql>
+
+    <!-- 查询系统参数基础SQL -->
+    <sql id="querySysDictBase">
+		select
+            hsdi.CREATE_DATE "createDate",
+            hsdi.DESCRIPT "descript",
+            hsdi.DICT_NAME "dictName",
+            hsdi.DICT_VALUE "dictValue",
+            hsdi.GROUP_ID "groupId",
+            hsdi.PARENT_ID "parentId",
+            hsdi.SORT_NUM "sortNum",
+            hsdi.STATUS "status"
+        from
+            HKMALL_SYS_DICT_ITEM hsdi
+        where 1=1
+	</sql>
+
+    <!-- 字典值翻译成名字 -->
+    <sql id="querySysDictName">
+       select
+            hsdi.DICT_NAME "dictName"
+        from
+            HKMALL_SYS_DICT_ITEM hsdi
+        where hsdi.STATUS = '1'
+    </sql>
+
+    <!-- 根据分组ID或字典值查询系统参数 -->
+    <select id="querySysDictList" parameterType="java.util.HashMap"
+            resultType="java.util.HashMap">
+        <include refid="querySysDictBase"/>
+        AND hsdi.STATUS = '1'
+        <if test="@org.apache.commons.lang3.StringUtils@isNotBlank(groupId)">
+            AND hsdi.GROUP_ID = #{groupId}
+        </if>
+        <if test="@org.apache.commons.lang3.StringUtils@isNotBlank(dictValue)">
+            AND hsdi.GROUP_ID = #{dictValue}
+        </if>
+        ORDER BY hsdi.SORT_NUM
+    </select>
+
+    <!-- 根据分组ID和字典值查询系统参数 -->
+    <select id="querySysDictUnique" parameterType="java.util.HashMap"
+            resultType="java.util.HashMap">
+        <include refid="querySysDictBase"/>
+        AND hsdi.STATUS = '1'
+        AND hsdi.GROUP_ID = #{groupId}
+        AND hsdi.GROUP_ID = #{dictValue}
+    </select>
+
+    <!-- 根据邮件模板ID查询模板配置 -->
+    <select id="queryMailTemplateUnique" parameterType="java.lang.String"
+            resultType="java.util.HashMap">
+        SELECT TMP_ID "tmpId",TMP_NAME "tmpName",SEND_USERNAME "username",SEND_PASSWORD "password",CREATE_DATE "createDate",SEND_PROTOCOL "protocol",SEND_MAILSERVER "mailServer",SEND_FROM "from",SEND_TO "to",MAIL_SUBJECT "subject",MAIL_BODY "body",MAIL_FILELIST "filelist",MAIL_IMAGE "mailImage"
+        FROM HKMALL_SYS_MAIL_TEMPLATE MT WHERE MT.TMP_ID=#{templateId}
+    </select>
+
+    <select id="findUnique">
+    select * from
+    </select>
+</mapper>

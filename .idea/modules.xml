@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/csg-demo/csg-demo.iml" filepath="$PROJECT_DIR$/csg-demo/csg-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/linjiaju.iml" filepath="$PROJECT_DIR$/linjiaju.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocean/ocean.iml" filepath="$PROJECT_DIR$/ocean/ocean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ocean-resource/ocean-resource.iml" filepath="$PROJECT_DIR$/ocean-resource/ocean-resource.iml" />
     </modules>
   </component>
 </project>

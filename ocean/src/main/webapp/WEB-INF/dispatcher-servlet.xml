@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--
+    自动扫描组件，可以写多个。component-scan 默认扫描的注解类型是 @Component，
+    不过，在 @Component语义基础上细化后的 @Repository、 @Service 和 @Controller
+    也同样可以获得 component-scan 的青睐
+     -->
+    <context:component-scan base-package="com"/>
+    <!--	<context:component-scan base-package="cn.com.abel.springProject.controller" />-->
+
+    <!--
+    <mvc:annotation-driven /> 是一种简写形式，完全可以手动配置替代这种简写形式，会自动注册
+    DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter 两个bean,
+    是spring MVC为@Controllers分发请求所必须的。
+     -->
+    <mvc:annotation-driven/>
+
+    <!--
+    配置js,css等静态文件直接映射到对应的文件夹，不被DispatcherServlet处理
+    若将以下改为：<mvc:default-servlet-handler />则使用默认的Servlet来响应静态文件
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+     -->
+
+    <!--
+    拦截器，本例中以下使用的方案是：拦截所有url。
+    另一种是：拦截匹配的URL，以下例子是当访问/user/*被BaseInterceptor拦截
+    <mvc:interceptors >
+    　　<mvc:interceptor>
+        　　<mvc:mapping path="/user/*" />
+        　　<bean class="cn.com.abel.springProject.interceptors.BaseInterceptor"></bean>
+    　　</mvc:interceptor>
+　　</mvc:interceptors>
+
+    <mvc:interceptors>
+        <bean class="cn.com.abel.springProject.interceptors.BaseInterceptor"/>
+    </mvc:interceptors>
+     -->
+
+    <!--	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />-->
+
+    <!-- HandlerMapping -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    <!-- HandlerAdapter -->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+    <!-- ViewResolver -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/test"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 处理器 -->
+    <bean name="/test" class="com.jn.b2c.test.controller.HelloWorldController"/>
+
+
+    <!-- FreeMarker begin -->
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"
+          lazy-init="false">
+        <property name="contentType" value="text/html; charset=UTF-8"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="requestContextAttribute" value="rc"/>
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".html"/>
+    </bean>
+
+    <bean id="freemarkerConfig"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="xml_escape" value-ref="fmXmlEscape"/>
+                <entry key="html_escape" value-ref="fmHtmlEscape"/>
+            </map>
+        </property>
+        <property name="templateLoaderPaths">
+            <list>
+                <value>/WEB-INF/views/</value>
+            </list>
+        </property>
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="tag_syntax">auto_detect</prop>
+                <prop key="template_update_delay">0</prop>
+                <prop key="defaultEncoding">UTF-8</prop>
+                <prop key="url_escaping_charset">UTF-8</prop>
+                <prop key="locale">zh_CN</prop>
+                <prop key="boolean_format">true,false</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="time_format">HH:mm:ss</prop>
+                <prop key="number_format">0.##</prop>
+                <prop key="whitespace_stripping">true</prop>
+                <prop key="classic_compatible">true</prop>
+            </props>
+        </property>
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+
+    <bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
+    <bean id="fmHtmlEscape" class="freemarker.template.utility.HtmlEscape"/>
+    <!-- FreeMarker end -->
+</beans>

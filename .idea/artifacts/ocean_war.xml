@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="ocean:war">
     <output-path>$PROJECT_DIR$/ocean/target</output-path>
-    <root id="archive" name="linjiaju.war">
+    <root id="archive" name="ocean.war">
       <element id="artifact" artifact-name="ocean:war exploded" />
     </root>
   </artifact>
